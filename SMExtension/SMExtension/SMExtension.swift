@@ -343,6 +343,14 @@ extension String {
         return Bool(self.intValue())
     }
     
+    /**
+     获取字符串长度
+     
+     - author: smallsao
+     - date: 16-07-20 16:07:33
+     
+     - returns: 长度
+     */
     public func length() -> Int {
         return self.characters.count
     }

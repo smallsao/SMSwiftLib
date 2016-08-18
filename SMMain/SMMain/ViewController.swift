@@ -11,30 +11,57 @@ import UIKit
 import SMExtension
 import SMUIKit
 
-class ViewController: UIViewController {
+class ViewController: SMBaseViewController {
 
+    var button:SMButton?
+    
+    var label:SMLabel?
+    var smView:SMView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         let button:SMButton = SMButton(type:.custom)
-        button.frame = CGRect.init(x: 30, y: 30, width: 100, height: 100)
+        button.frame = CGRect.init(x: 20, y: 20, width: 80, height: 80)
         button.setTitle("按钮", for:UIControlState.normal)
         self.view.addSubview(button);
         button.setTitleColor(UIColor.green(), for: .normal)
         button.addTarget(self,action:#selector(tapped),for:.touchUpInside)
-//        button.setBackgroundColor(UIColor.yellow(), for: .normal)
+        button.setBackgroundColor(UIColor.yellow(), for: .normal)
         button.setBackgroundColor(UIColor.blue(), for: .highlighted)
         
         button.setImage(UIImage.init(named: "remove_item"), for: .normal)
         button.centerVImageAndTitle(space: 10)
-        
+        button.addNumberDot(number: "48")
         
         let label:SMLabel = SMLabel()
-        label.frame = CGRect.init(x: 100, y: 100, width: 100, height: 100)
-        label.backgroundColor = UIColor.red()
+        label.frame = CGRect.init(x: 120, y: 20, width: 80, height: 80)
+        label.backgroundColor = UIColor.green()
+        label.text = ""
         label.addTarget(self, action: #selector(tappedLabel), for: .touchUpInside)
         self.view.addSubview(label)
+        label.addNumberDot(number: "100")
+
+        
+        
+        let smView:SMView = SMView()
+        self.view.addSubview(smView)
+        smView.frame = CGRect(x: 220, y: 20, width: 80, height: 80)
+        smView.backgroundColor = UIColor.yellow()
+
+//        smView.addLine(style: .SMBorderStyleLeft, color: UIColor.red(), width: 1, padding: 10)
+//        smView.addBorder(styles: [.SMBorderStyleTop, .SMBorderStyleLeft, .SMBorderStyleRight, .SMBorderStyleBottom], color: UIColor.green(), width: 0.5)
+        smView.addDashed(color: UIColor.gray(), width: 0.5, space: 1)
+        smView.addRedDot()
+        
+        
+        
+        self.button = button
+        self.label = label
+        self.smView = smView
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,29 +70,52 @@ class ViewController: UIViewController {
     }
 
     func tappedLabel() {
+        self.hideLoadingToast()
+        self.hideToast()
+        
+//        self.button?.addNumberDot(number: "但是")
+//        self.label?.addRedDot()
+//        self.smView?.addRedDot()
+        
+        
 //        print("label")
-        let testRequest = TestRequest()
-        testRequest.id = "111"
-        testRequest.name = "smallsao"
-        testRequest.sendRequest(success: {
-            (data: AnyObject) in
-            print("   .............  \(data)")
-            
-            }, serviceException: {
-                (error: NSError) in
-                print("   .............  \(error.description)")
-            }, networkException: {
-                (error: NSError) in
-                
-        })
+//        let testRequest = TestRequest()
+//        testRequest.id = "111"
+//        testRequest.name = "smallsao"
+//        testRequest.sendRequest(success: {
+//            (data: AnyObject) in
+//            print("   .............  \(data)")
+//            
+//            }, serviceException: {
+//                (error: NSError) in
+//                print("   .............  \(error.description)")
+//            }, networkException: {
+//                (error: NSError) in
+//                
+//        })
     }
     
     func tapped (){
 
-        self.ArrayExtension()
-        
-        self.stringExtension()
+//        self.ArrayExtension()
+//        
+//        self.stringExtension()
 //        self.dictExtension()
+//        
+//        self.button?.hideRedDot()
+//        self.label?.hideRedDot()
+//        self.smView?.hideRedDot()
+        
+//        self.showToast(tip: "ssssss", duration: Float(5.0))
+        
+//        self.showLoadingToast()
+        self.showToast(view: self.view as! SMView, tip: "dsfjasldfjl", duration: 10, completion:
+            {
+                () in
+                
+            
+            })
+
     }
     
     func ArrayExtension() {

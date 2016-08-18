@@ -10,6 +10,14 @@ import UIKit
 
 
 extension UIButton {
+    /**
+     按钮文字跟图片上下居中
+     
+     - author: smallsao
+     - date: 16-07-20 16:07:49
+     
+     - parameter space: 图片跟按钮间距
+     */
     public func centerVImageAndTitle(space:CGFloat) {
         let padding = max(space, 0.0)
         let imageSize = (self.imageView?.frame.size)!
@@ -24,6 +32,14 @@ extension UIButton {
         
     }
     
+    /**
+     按钮文字与图片左右居中
+     
+     - author: smallsao
+     - date: 16-07-20 16:07:25
+     
+     - parameter space: 图片与按钮间隔
+     */
     public func centerHImageAndTitle(space:CGFloat) {
         let padding = max(space, 0.0)
         
@@ -42,6 +58,15 @@ extension UIButton {
 }
 
 public class SMButton: UIButton {
+    /**
+     根据UIControlState控制按钮背景颜色
+     
+     - author: smallsao
+     - date: 16-07-20 16:07:54
+     
+     - parameter color: 颜色
+     - parameter state: status
+     */
     public func setBackgroundColor(_ color: UIColor?, for state: UIControlState) {
         let bounds = self.bounds
         UIGraphicsBeginImageContextWithOptions(bounds.size, true, self.layer.contentsScale)

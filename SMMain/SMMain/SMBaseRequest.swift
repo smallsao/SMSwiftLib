@@ -16,24 +16,55 @@ public class SMBaseRequest: NSObject, NSURLConnectionDataDelegate {
     var urlSting: String = ""
     public var params: Dictionary<String, String> = Dictionary()
     
-    
+    /**
+     初始化
+     
+     - author: smallsao
+     - date: 16-07-20 16:07:53
+     
+     - returns:
+     */
     override init() {
         self.url = URL(string: "")!
         super.init()
     }
 
+    /**
+     组装数据，组装一些默认值
+     
+     - author: smallsao
+     - date: 16-07-20 16:07:12
+     */
     func assembleParameter() {
         
     }
-
+    
+    /**
+     参数是否合法
+     
+     - author: smallsao
+     - date: 16-07-20 16:07:32
+     
+     - returns: bool
+     */
     func validateParameter() -> Bool{
         return true
         
     }
     
-    func parseResponseData(respData: Dictionary<String,AnyObject>) -> AnyObject{
+    /**
+      解析返回数据
+     
+     - author: smallsao
+     - date: 16-07-20 16:07:03
+     
+     - parameter respData: 解析数据
+     
+     - returns: (失败对象，成功数据包)
+     */
+    func parseResponseData(respData: Dictionary<String,AnyObject>) ->  (error: NSError?, data: AnyObject?){
         
-        return ""
+        return (nil,nil)
     }
     
     func handleErrror(error: NSError) {
@@ -102,12 +133,12 @@ public class SMBaseRequest: NSObject, NSURLConnectionDataDelegate {
                     serviceException(error!)
                 }
                 else {
-                    let result = self.parseResponseData(respData: dict)
-                    if result is NSError {
-                        serviceException(result as! NSError)
+                    let (dataErr, rData) = self.parseResponseData(respData: dict)
+                    if dataErr != nil {
+                        serviceException(dataErr!)
                     }
                     else {
-                        success(result)
+                        success(rData!)
                     }
                 }
             }

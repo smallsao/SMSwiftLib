@@ -26,9 +26,9 @@ public class TestRequest: SMBaseRequest {
     }
     
 
-    override func parseResponseData(respData: Dictionary<String, AnyObject>) -> AnyObject {
+    override func parseResponseData(respData: Dictionary<String, AnyObject>) -> (error: NSError?, data: AnyObject?) {
         
-        return ""
+        return (nil,nil)
     }
     
 }

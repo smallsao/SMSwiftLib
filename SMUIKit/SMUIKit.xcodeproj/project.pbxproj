@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F206CC771D643E470044B76D /* SMBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F206CC761D643E470044B76D /* SMBaseViewController.swift */; };
+		F206CC791D643E670044B76D /* SMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F206CC781D643E670044B76D /* SMViewController.swift */; };
+		F206CC7B1D6440F50044B76D /* SMUIKitUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F206CC7A1D6440F50044B76D /* SMUIKitUtils.swift */; };
+		F27285F31D64691500AAE485 /* SMExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27285F21D64691500AAE485 /* SMExtension.framework */; };
+		F273288B1D3F719B00647F9E /* SMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273288A1D3F719B00647F9E /* SMView.swift */; };
+		F2DFA48B1D40C21C009D4419 /* SMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFA48A1D40C21C009D4419 /* SMTextField.swift */; };
+		F2DFA48D1D40C2A9009D4419 /* SMSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFA48C1D40C2A9009D4419 /* SMSwitch.swift */; };
+		F2DFA48F1D40C309009D4419 /* SMSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFA48E1D40C309009D4419 /* SMSlider.swift */; };
 		F2E4D4D91D3E144F00D4E916 /* SMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D4D81D3E144F00D4E916 /* SMLabel.swift */; };
 		F2E4D4DE1D3E198A00D4E916 /* SMLabel.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2E4D4D81D3E144F00D4E916 /* SMLabel.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2E4D4E41D3E1C1500D4E916 /* SMUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D4E31D3E1C1500D4E916 /* SMUIKit.swift */; };
@@ -14,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F206CC761D643E470044B76D /* SMBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBaseViewController.swift; sourceTree = "<group>"; };
+		F206CC781D643E670044B76D /* SMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMViewController.swift; sourceTree = "<group>"; };
+		F206CC7A1D6440F50044B76D /* SMUIKitUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUIKitUtils.swift; sourceTree = "<group>"; };
+		F27285F21D64691500AAE485 /* SMExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMExtension.framework; path = "../../../Library/Developer/Xcode/DerivedData/SMSwiftLib-dmsxtildlclbwseacevhogmfxmvv/Build/Products/Debug-iphonesimulator/SMExtension.framework"; sourceTree = "<group>"; };
+		F273288A1D3F719B00647F9E /* SMView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMView.swift; sourceTree = "<group>"; };
+		F2DFA48A1D40C21C009D4419 /* SMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTextField.swift; sourceTree = "<group>"; };
+		F2DFA48C1D40C2A9009D4419 /* SMSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSwitch.swift; sourceTree = "<group>"; };
+		F2DFA48E1D40C309009D4419 /* SMSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSlider.swift; sourceTree = "<group>"; };
 		F2E4D4C41D3E130800D4E916 /* SMUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E4D4C81D3E130800D4E916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2E4D4D81D3E144F00D4E916 /* SMLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMLabel.swift; sourceTree = "<group>"; };
@@ -26,17 +42,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27285F31D64691500AAE485 /* SMExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F27285F11D64691400AAE485 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F27285F21D64691500AAE485 /* SMExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F2E4D4BA1D3E130800D4E916 = {
 			isa = PBXGroup;
 			children = (
 				F2E4D4C61D3E130800D4E916 /* SMUIKit */,
 				F2E4D4C51D3E130800D4E916 /* Products */,
+				F27285F11D64691400AAE485 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,9 +78,16 @@
 			isa = PBXGroup;
 			children = (
 				F2E4D4C81D3E130800D4E916 /* Info.plist */,
+				F206CC7A1D6440F50044B76D /* SMUIKitUtils.swift */,
 				F2E4D4E31D3E1C1500D4E916 /* SMUIKit.swift */,
+				F273288A1D3F719B00647F9E /* SMView.swift */,
 				F2E4D4D81D3E144F00D4E916 /* SMLabel.swift */,
 				F2E4D4E51D3E211600D4E916 /* SMButton.swift */,
+				F2DFA48A1D40C21C009D4419 /* SMTextField.swift */,
+				F2DFA48C1D40C2A9009D4419 /* SMSwitch.swift */,
+				F2DFA48E1D40C309009D4419 /* SMSlider.swift */,
+				F206CC761D643E470044B76D /* SMBaseViewController.swift */,
+				F206CC781D643E670044B76D /* SMViewController.swift */,
 			);
 			path = SMUIKit;
 			sourceTree = "<group>";
@@ -139,9 +172,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F206CC7B1D6440F50044B76D /* SMUIKitUtils.swift in Sources */,
 				F2E4D4E41D3E1C1500D4E916 /* SMUIKit.swift in Sources */,
 				F2E4D4D91D3E144F00D4E916 /* SMLabel.swift in Sources */,
+				F2DFA48B1D40C21C009D4419 /* SMTextField.swift in Sources */,
+				F2DFA48D1D40C2A9009D4419 /* SMSwitch.swift in Sources */,
+				F2DFA48F1D40C309009D4419 /* SMSlider.swift in Sources */,
+				F273288B1D3F719B00647F9E /* SMView.swift in Sources */,
+				F206CC791D643E670044B76D /* SMViewController.swift in Sources */,
 				F2E4D4E61D3E211600D4E916 /* SMButton.swift in Sources */,
+				F206CC771D643E470044B76D /* SMBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +302,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";
 			};
 			name = Debug;
 		};
@@ -282,6 +323,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";
 			};
 			name = Release;
 		};
@@ -304,6 +346,7 @@
 				F2E4D4CE1D3E130800D4E916 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
