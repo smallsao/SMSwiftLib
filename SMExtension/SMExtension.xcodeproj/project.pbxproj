@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F286BF5F1D751B42004EE5AE /* SMExtension.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF5E1D751B42004EE5AE /* SMExtension.xcassets */; };
 		F2B076151D35FD1600928FB9 /* SMExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B076141D35FD1600928FB9 /* SMExtension.swift */; };
 		F2B0761C1D35FE1E00928FB9 /* SMExtension.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2B076141D35FD1600928FB9 /* SMExtension.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2E4D49D1D3E127700D4E916 /* SMUIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D49C1D3E127700D4E916 /* SMUIKitExtension.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F286BF5E1D751B42004EE5AE /* SMExtension.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SMExtension.xcassets; sourceTree = "<group>"; };
 		F2B076091D35FD0A00928FB9 /* SMExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B0760E1D35FD0A00928FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B076141D35FD1600928FB9 /* SMExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMExtension.swift; sourceTree = "<group>"; };
@@ -34,6 +36,7 @@
 		F2B075FF1D35FD0A00928FB9 = {
 			isa = PBXGroup;
 			children = (
+				F286BF5E1D751B42004EE5AE /* SMExtension.xcassets */,
 				F2B0760B1D35FD0A00928FB9 /* SMExtension */,
 				F2B0760A1D35FD0A00928FB9 /* Products */,
 			);
@@ -127,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F286BF5F1D751B42004EE5AE /* SMExtension.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

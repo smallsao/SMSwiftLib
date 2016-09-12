@@ -71,7 +71,7 @@ extension UIView {
     
     public func addLine(style: SMBorderStyle, color: UIColor, width: CGFloat, padding:CGFloat) {
         let size = self.bounds.size
-        var layer = CALayer()
+        let layer = CALayer()
         layer.backgroundColor = color.cgColor
         
         if style == .SMBorderStyleTop {
@@ -92,8 +92,7 @@ extension UIView {
     }
     
     
-    public func SddBorder(styles: [SMBorderStyle], color: UIColor, width: CGFloat) {
-        let size = self.bounds.size
+    public func addBorder(styles: [SMBorderStyle], color: UIColor, width: CGFloat) {
         for style:SMBorderStyle in styles {
             addLine(style: style, color: color, width: width, padding: 0)
         }
@@ -102,7 +101,6 @@ extension UIView {
     
     public func addDashed(color: UIColor, width: CGFloat, space:CGFloat) {
         var border = CAShapeLayer()
-        
         border.strokeColor = color.cgColor
         border.fillColor = nil
         border.path = UIBezierPath(rect: self.bounds).cgPath
@@ -130,7 +128,6 @@ extension UIView {
 
         redDot.text = ""
         redDot.isHidden = false
-        let viewFrame = self.bounds
         redDot.frame = CGRect(x: self.width - 6, y: -4, width: 10, height: 10)
         redDot.layer.cornerRadius = 5;
         redDot.clipsToBounds = true
@@ -160,8 +157,8 @@ extension UIView {
         redDot?.textColor = UIColor.white()
         let font = UIFont.systemFont(ofSize: 10)
         
-        var attributes = [NSFontAttributeName: font]
-        var option = NSStringDrawingOptions(rawValue: 1)
+        let attributes = [NSFontAttributeName: font]
+        let option = NSStringDrawingOptions(rawValue: 1)
         let rect:CGRect = s.boundingRect(with: CGSize(width: 100, height: 16), options:option, attributes: attributes, context: nil)
         
         var width = rect.width + 8
@@ -180,7 +177,7 @@ extension UIView {
     }
     
     public func hideRedDot() {
-        var redDot = self.viewWithTag(999)
+        let redDot = self.viewWithTag(999)
         if redDot != nil {
             redDot?.isHidden = true
         }
