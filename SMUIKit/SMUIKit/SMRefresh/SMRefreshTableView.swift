@@ -10,7 +10,7 @@ import UIKit
 
 import SMExtension
 
-@objc public protocol SMRefreshTableViewDelegate: NSObjectProtocol,UITableViewDelegate {
+@objc public protocol SMRefreshTableViewDelegate: UITableViewDelegate, NSObjectProtocol {
 
     @objc optional func tableHeaderRefresh(_ tableView:SMRefreshTableView)
     
@@ -37,7 +37,7 @@ enum SMRefreshTableFooterViewStyle:Int {
 }
 
 
-class SMRefreshTableHeaderView:SMView {
+class SMRefreshTableHeaderView:UIControl {
     var currentStyle:SMRefreshTableHeaderViewStyle = .Normal
     
     
@@ -140,6 +140,38 @@ class SMRefreshTableHeaderView:SMView {
         }
     }
     
+   
+    func dealImage(rotate:Bool, animated:Bool) {
+        let previousFlip = ivImage.transform.isIdentity
+        if rotate == previousFlip {
+            return
+        }
+        if animated {
+            UIView.beginAnimations(nil, context: nil)
+            UIView.setAnimationDuration(0.18)
+        }
+        if !rotate {
+            ivImage.transform = CGAffineTransform.identity
+        }
+        else {
+            ivImage.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
+        }
+        
+        if animated {
+            UIView.commitAnimations()
+        }
+    }
+    
+    func dealActivity(isOn:Bool) {
+        ivImage.isHidden = isOn
+        if isOn {
+            activity.startAnimating()
+        }
+        else {
+            activity.stopAnimating()
+        }
+    }
+    
     func startLoading(_ tableView:UITableView, animated:Bool) {
         if currentStyle != .Loading {
             update(style: .Loading)
@@ -188,40 +220,10 @@ class SMRefreshTableHeaderView:SMView {
         lbTime.text = dateStr
     }
     
-    func dealImage(rotate:Bool, animated:Bool) {
-        let previousFlip = ivImage.transform.isIdentity
-        if rotate == previousFlip {
-            return
-        }
-        if animated {
-            UIView.beginAnimations(nil, context: nil)
-            UIView.setAnimationDuration(0.18)
-        }
-        if !rotate {
-            ivImage.transform = CGAffineTransform.identity
-        }
-        else {
-            ivImage.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
-        }
-        
-        if animated {
-            UIView.commitAnimations()
-        }
-    }
-    
-    func dealActivity(isOn:Bool) {
-        ivImage.isHidden = isOn
-        if isOn {
-            activity.startAnimating()
-        }
-        else {
-            activity.stopAnimating()
-        }
-    }
     
 }
 
-class SMRefreshTableFooterView:SMView {
+class SMRefreshTableFooterView:UIControl {
     var currentStyle:SMRefreshTableFooterViewStyle = .Normal
     var lbTitle:SMLabel = SMLabel()
     var activity:UIActivityIndicatorView = UIActivityIndicatorView()
@@ -276,9 +278,10 @@ class SMRefreshTableFooterView:SMView {
         self.currentStyle = style
         switch style {
             case .Normal:
-                lbTitle.text = ""
+                lbTitle.text = "松开加载更多"
                 activity.stopAnimating()
                 self.isHidden = true
+                break
                 
             case .Release:
                 lbTitle.text = "正在加载..."
@@ -301,7 +304,7 @@ class SMRefreshTableFooterView:SMView {
 }
 
 public class SMRefreshTableView: SMView, SMRefreshTableViewDelegate, SMRefreshTableViewDataSource {
-    var tableView:UITableView = SMTableView()
+    public var tableView:UITableView = SMTableView()
 
     weak public var delegate: SMRefreshTableViewDelegate?
     weak public var dataSource: SMRefreshTableViewDataSource?
@@ -310,52 +313,41 @@ public class SMRefreshTableView: SMView, SMRefreshTableViewDelegate, SMRefreshTa
     var footerView: SMRefreshTableFooterView?
     
     public var isRefreshing:Bool = false  //0: 正常 1：刷新中
-    var isDraging:Bool = false  //0: 正常 1：拖拽中
+    var isDragingEnd:Bool = false  //1: 正常 0：拖拽中
     
     var lastOffsetY:CGFloat = 0.0
     
     
     
-    public var needHeaderRefresh:Bool {
-        get {
-            return self.needHeaderRefresh
-        }
-        set {
-            configTableHeader()
-        }
-    }
-    
-    public var needFooterRefresh:Bool {
-        get {
-            return self.needFooterRefresh
-        }
-        set {
-            configTableFooter()
-        }
-    }
-    
-    
-   
-    
-    
-    override internal init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         
         configTable(style: .plain)
+    }
+    
+    public init(frame: CGRect, style: UITableViewStyle) {
+        super.init(frame: frame)
+        configTable(style: style)
+    }
+    
+    
+    public func needRefresh(header:Bool, footer:Bool) {
+        if header {
+            configTableHeader()
+        }
+        if footer {
+            configTableFooter()
+        }
     }
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    internal init(frame: CGRect, style: UITableViewStyle) {
-        super.init(frame: frame)
-        configTable(style: style)
-    }
-    
+   
     
     func configTable(style: UITableViewStyle) -> Void {
-        tableView = SMTableView(frame: CGRect.zero, style: style)
+        tableView = SMTableView(frame: self.bounds, style: style)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
@@ -393,7 +385,7 @@ public class SMRefreshTableView: SMView, SMRefreshTableViewDelegate, SMRefreshTa
         }
     }
     
-    func reloadData() {
+    public func reloadData() {
         tableView.reloadData()
         tableView.setNeedsLayout()
     }
@@ -404,14 +396,14 @@ public class SMRefreshTableView: SMView, SMRefreshTableViewDelegate, SMRefreshTa
         tableView.reloadData()
     }
     
-    func enableTableHeader() {
+    public func enableTableHeader() {
         if (headerView != nil && headerView?.currentStyle != .Normal) {
             hideHeaderLoading()
         }
         isRefreshing = false
     }
     
-    func enableTableFooter() {
+    public func enableTableFooter() {
         if (footerView != nil && footerView?.currentStyle != .Normal) {
             footerView?.update(style: .Normal)
         }
@@ -426,7 +418,7 @@ public class SMRefreshTableView: SMView, SMRefreshTableViewDelegate, SMRefreshTa
     
     
     func drag() {
-        if (isRefreshing || isDraging) {
+        if (isRefreshing || isDragingEnd) {
             return
         }
         else {
@@ -436,12 +428,12 @@ public class SMRefreshTableView: SMView, SMRefreshTableViewDelegate, SMRefreshTa
                 let cSize = tableView.contentSize
                 let draggedDistance = tableView.height - cSize.height + cOffset.y
                 if draggedDistance > 0  {
-                    if footerView != nil && footerView?.currentStyle != .Normal {
+                    if footerView != nil && footerView?.currentStyle == .Normal {
                         footerView?.update(style: .Release)
                     }
                 }
                 else if draggedDistance > -80 {
-                    if footerView != nil && footerView?.currentStyle != .Normal {
+                    if footerView != nil && footerView?.currentStyle == .Normal {
                         footerView?.update(style: .Loading)
                         if delegate != nil {
                             let k = delegate!
@@ -455,7 +447,7 @@ public class SMRefreshTableView: SMView, SMRefreshTableViewDelegate, SMRefreshTa
             }
             else if offsetY < lastOffsetY {
                 if offsetY <= -65 {
-                    if headerView != nil && headerView?.currentStyle != .Normal {
+                    if headerView != nil && headerView?.currentStyle == .Normal {
                         headerView?.update(style: .Release)
                     }
                 }
@@ -523,7 +515,16 @@ public class SMRefreshTableView: SMView, SMRefreshTableViewDelegate, SMRefreshTa
         super.layoutSubviews()
         tableView.frame = CGRect(x: 0, y: 0, width: self.width, height: self.height)
         headerView?.frame = CGRect(x: 0, y: -self.height, width: self.width, height: self.height)
-        footerView?.frame = CGRect(x: 0, y: tableView.contentSize.height, width: self.width, height: 60)
+        
+        var y:CGFloat = 0.0
+        if tableView.contentSize.height < tableView.height {
+            y = tableView.height
+        }
+        else {
+            y = tableView.contentSize.height
+        }
+        
+        footerView?.frame = CGRect(x: 0, y: y, width: self.width, height: 60)
     }
     
 //MARK: ******************  UIScrollViewDelegate  ******************
@@ -543,7 +544,7 @@ public class SMRefreshTableView: SMView, SMRefreshTableViewDelegate, SMRefreshTa
                     k.scrollViewDidEndDragging!(scrollView, willDecelerate: decelerate)
                 }
             }
-            isDraging = true
+            isDragingEnd = true
             dragEnd()
         }
     }
@@ -559,7 +560,7 @@ public class SMRefreshTableView: SMView, SMRefreshTableViewDelegate, SMRefreshTa
     }
     
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        isDraging = false
+        isDragingEnd = false
         lastOffsetY = scrollView.contentOffset.y
         if scrollView == tableView {
             if let k = delegate {

@@ -7,151 +7,151 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F286BF5F1D751B42004EE5AE /* SMExtension.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF5E1D751B42004EE5AE /* SMExtension.xcassets */; };
-		F2B076151D35FD1600928FB9 /* SMExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B076141D35FD1600928FB9 /* SMExtension.swift */; };
-		F2B0761C1D35FE1E00928FB9 /* SMExtension.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2B076141D35FD1600928FB9 /* SMExtension.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2E4D49D1D3E127700D4E916 /* SMUIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D49C1D3E127700D4E916 /* SMUIKitExtension.swift */; };
-		F2E4D49E1D3E128200D4E916 /* SMUIKitExtension.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2E4D49C1D3E127700D4E916 /* SMUIKitExtension.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2CB74951D87EC0500F0D94A /* SMRouteBus.h in Headers */ = {isa = PBXBuildFile; fileRef = F2CB74931D87EC0500F0D94A /* SMRouteBus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2CB749F1D87EC3000F0D94A /* SMExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CB749E1D87EC3000F0D94A /* SMExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F286BF5E1D751B42004EE5AE /* SMExtension.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SMExtension.xcassets; sourceTree = "<group>"; };
-		F2B076091D35FD0A00928FB9 /* SMExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2B0760E1D35FD0A00928FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2B076141D35FD1600928FB9 /* SMExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMExtension.swift; sourceTree = "<group>"; };
-		F2E4D49C1D3E127700D4E916 /* SMUIKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUIKitExtension.swift; sourceTree = "<group>"; };
+		F2CB74901D87EC0500F0D94A /* SMRouteBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMRouteBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2CB74931D87EC0500F0D94A /* SMRouteBus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMRouteBus.h; sourceTree = "<group>"; };
+		F2CB74941D87EC0500F0D94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2CB749E1D87EC3000F0D94A /* SMExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMExtension.framework; path = "../../../Library/Developer/Xcode/DerivedData/SMSwiftLib-dmsxtildlclbwseacevhogmfxmvv/Build/Products/Debug-iphonesimulator/SMExtension.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F2B076051D35FD0A00928FB9 /* Frameworks */ = {
+		F2CB748C1D87EC0500F0D94A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2CB749F1D87EC3000F0D94A /* SMExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F2B075FF1D35FD0A00928FB9 = {
+		F2CB74861D87EC0500F0D94A = {
 			isa = PBXGroup;
 			children = (
-				F286BF5E1D751B42004EE5AE /* SMExtension.xcassets */,
-				F2B0760B1D35FD0A00928FB9 /* SMExtension */,
-				F2B0760A1D35FD0A00928FB9 /* Products */,
+				F2CB74921D87EC0500F0D94A /* SMRouteBus */,
+				F2CB74911D87EC0500F0D94A /* Products */,
+				F2CB749D1D87EC3000F0D94A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		F2B0760A1D35FD0A00928FB9 /* Products */ = {
+		F2CB74911D87EC0500F0D94A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F2B076091D35FD0A00928FB9 /* SMExtension.framework */,
+				F2CB74901D87EC0500F0D94A /* SMRouteBus.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F2B0760B1D35FD0A00928FB9 /* SMExtension */ = {
+		F2CB74921D87EC0500F0D94A /* SMRouteBus */ = {
 			isa = PBXGroup;
 			children = (
-				F2B0760E1D35FD0A00928FB9 /* Info.plist */,
-				F2B076141D35FD1600928FB9 /* SMExtension.swift */,
-				F2E4D49C1D3E127700D4E916 /* SMUIKitExtension.swift */,
+				F2CB74931D87EC0500F0D94A /* SMRouteBus.h */,
+				F2CB74941D87EC0500F0D94A /* Info.plist */,
 			);
-			path = SMExtension;
+			path = SMRouteBus;
+			sourceTree = "<group>";
+		};
+		F2CB749D1D87EC3000F0D94A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2CB749E1D87EC3000F0D94A /* SMExtension.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F2B076061D35FD0A00928FB9 /* Headers */ = {
+		F2CB748D1D87EC0500F0D94A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2B0761C1D35FE1E00928FB9 /* SMExtension.swift in Headers */,
-				F2E4D49E1D3E128200D4E916 /* SMUIKitExtension.swift in Headers */,
+				F2CB74951D87EC0500F0D94A /* SMRouteBus.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F2B076081D35FD0A00928FB9 /* SMExtension */ = {
+		F2CB748F1D87EC0500F0D94A /* SMRouteBus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F2B076111D35FD0A00928FB9 /* Build configuration list for PBXNativeTarget "SMExtension" */;
+			buildConfigurationList = F2CB74981D87EC0500F0D94A /* Build configuration list for PBXNativeTarget "SMRouteBus" */;
 			buildPhases = (
-				F2B076041D35FD0A00928FB9 /* Sources */,
-				F2B076051D35FD0A00928FB9 /* Frameworks */,
-				F2B076061D35FD0A00928FB9 /* Headers */,
-				F2B076071D35FD0A00928FB9 /* Resources */,
+				F2CB748B1D87EC0500F0D94A /* Sources */,
+				F2CB748C1D87EC0500F0D94A /* Frameworks */,
+				F2CB748D1D87EC0500F0D94A /* Headers */,
+				F2CB748E1D87EC0500F0D94A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SMExtension;
-			productName = SMExtension;
-			productReference = F2B076091D35FD0A00928FB9 /* SMExtension.framework */;
+			name = SMRouteBus;
+			productName = SMRouteBus;
+			productReference = F2CB74901D87EC0500F0D94A /* SMRouteBus.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F2B076001D35FD0A00928FB9 /* Project object */ = {
+		F2CB74871D87EC0500F0D94A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = smallsao;
 				TargetAttributes = {
-					F2B076081D35FD0A00928FB9 = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = S38HQFK7S4;
-						DevelopmentTeamName = "hengxing zeng";
-						LastSwiftMigration = 0800;
+					F2CB748F1D87EC0500F0D94A = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 3A946D8N5T;
+						DevelopmentTeamName = "Beijing Koudai Technology Co., Ltd.";
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = F2B076031D35FD0A00928FB9 /* Build configuration list for PBXProject "SMExtension" */;
+			buildConfigurationList = F2CB748A1D87EC0500F0D94A /* Build configuration list for PBXProject "SMRouteBus" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = F2B075FF1D35FD0A00928FB9;
-			productRefGroup = F2B0760A1D35FD0A00928FB9 /* Products */;
+			mainGroup = F2CB74861D87EC0500F0D94A;
+			productRefGroup = F2CB74911D87EC0500F0D94A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F2B076081D35FD0A00928FB9 /* SMExtension */,
+				F2CB748F1D87EC0500F0D94A /* SMRouteBus */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F2B076071D35FD0A00928FB9 /* Resources */ = {
+		F2CB748E1D87EC0500F0D94A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F286BF5F1D751B42004EE5AE /* SMExtension.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F2B076041D35FD0A00928FB9 /* Sources */ = {
+		F2CB748B1D87EC0500F0D94A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2E4D49D1D3E127700D4E916 /* SMUIKitExtension.swift in Sources */,
-				F2B076151D35FD1600928FB9 /* SMExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		F2B0760F1D35FD0A00928FB9 /* Debug */ = {
+		F2CB74961D87EC0500F0D94A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -163,6 +163,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
@@ -189,10 +190,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -200,7 +202,7 @@
 			};
 			name = Debug;
 		};
-		F2B076101D35FD0A00928FB9 /* Release */ = {
+		F2CB74971D87EC0500F0D94A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -212,6 +214,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
@@ -232,9 +235,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -242,70 +246,61 @@
 			};
 			name = Release;
 		};
-		F2B076121D35FD0A00928FB9 /* Debug */ = {
+		F2CB74991D87EC0500F0D94A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "'${SRCROOT}/../**'";
-				HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";
-				INFOPLIST_FILE = SMExtension/Info.plist;
+				INFOPLIST_FILE = SMRouteBus/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.koudai.weidian.smallsao.SMExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koudai.weidian.smallsao.SMRouteBus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
-				USER_HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";
 			};
 			name = Debug;
 		};
-		F2B076131D35FD0A00928FB9 /* Release */ = {
+		F2CB749A1D87EC0500F0D94A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "'${SRCROOT}/../**'";
-				HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";
-				INFOPLIST_FILE = SMExtension/Info.plist;
+				INFOPLIST_FILE = SMRouteBus/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.koudai.weidian.smallsao.SMExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koudai.weidian.smallsao.SMRouteBus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
-				USER_HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F2B076031D35FD0A00928FB9 /* Build configuration list for PBXProject "SMExtension" */ = {
+		F2CB748A1D87EC0500F0D94A /* Build configuration list for PBXProject "SMRouteBus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F2B0760F1D35FD0A00928FB9 /* Debug */,
-				F2B076101D35FD0A00928FB9 /* Release */,
+				F2CB74961D87EC0500F0D94A /* Debug */,
+				F2CB74971D87EC0500F0D94A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F2B076111D35FD0A00928FB9 /* Build configuration list for PBXNativeTarget "SMExtension" */ = {
+		F2CB74981D87EC0500F0D94A /* Build configuration list for PBXNativeTarget "SMRouteBus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F2B076121D35FD0A00928FB9 /* Debug */,
-				F2B076131D35FD0A00928FB9 /* Release */,
+				F2CB74991D87EC0500F0D94A /* Debug */,
+				F2CB749A1D87EC0500F0D94A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F2B076001D35FD0A00928FB9 /* Project object */;
+	rootObject = F2CB74871D87EC0500F0D94A /* Project object */;
 }

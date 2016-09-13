@@ -14,6 +14,34 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F2E4D4C31D3E130800D4E916"
+               BuildableName = "SMUIKit.framework"
+               BlueprintName = "SMUIKit"
+               ReferencedContainer = "container:../SMUIKit/SMUIKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F2B076081D35FD0A00928FB9"
+               BuildableName = "SMExtension.framework"
+               BlueprintName = "SMExtension"
+               ReferencedContainer = "container:../SMExtension/SMExtension.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F20CDC931D35E56900225D8F"
                BuildableName = "SMMain.app"
                BlueprintName = "SMMain"
