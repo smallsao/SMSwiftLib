@@ -17,6 +17,8 @@
 		F2A536071D8687AE00994591 /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A536061D8687AE00994591 /* Test2ViewController.swift */; };
 		F2B0761B1D35FDE900928FB9 /* SMExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B0761A1D35FDE900928FB9 /* SMExtension.framework */; };
 		F2CB749C1D87EC1E00F0D94A /* SMRouteBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CB749B1D87EC1E00F0D94A /* SMRouteBus.framework */; };
+		F2CB74A91D87EF4300F0D94A /* TestRefreshTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CB74A81D87EF4300F0D94A /* TestRefreshTableViewController.swift */; };
+		F2CB74AF1D87FF0300F0D94A /* TestRBPageCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CB74AE1D87FF0300F0D94A /* TestRBPageCenter.swift */; };
 		F2E4D4E21D3E1A6100D4E916 /* SMUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E4D4E11D3E1A6100D4E916 /* SMUIKit.framework */; };
 		F2E4D4E81D3E2ABA00D4E916 /* remove_item.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E4D4E71D3E2ABA00D4E916 /* remove_item.png */; };
 		F2E4D5041D3F25EC00D4E916 /* SMBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D5031D3F25EC00D4E916 /* SMBaseRequest.swift */; };
@@ -50,6 +52,8 @@
 		F2A536061D8687AE00994591 /* Test2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
 		F2B0761A1D35FDE900928FB9 /* SMExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMExtension.framework; path = "../SMExtension/build/Debug-iphoneos/SMExtension.framework"; sourceTree = "<group>"; };
 		F2CB749B1D87EC1E00F0D94A /* SMRouteBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMRouteBus.framework; path = "../SMRouteBus/build/Debug-iphoneos/SMRouteBus.framework"; sourceTree = "<group>"; };
+		F2CB74A81D87EF4300F0D94A /* TestRefreshTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRefreshTableViewController.swift; sourceTree = "<group>"; };
+		F2CB74AE1D87FF0300F0D94A /* TestRBPageCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRBPageCenter.swift; sourceTree = "<group>"; };
 		F2E4D4E11D3E1A6100D4E916 /* SMUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMUIKit.framework; path = "../SMUIKit/build/Debug-iphoneos/SMUIKit.framework"; sourceTree = "<group>"; };
 		F2E4D4E71D3E2ABA00D4E916 /* remove_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remove_item.png; sourceTree = "<group>"; };
 		F2E4D5031D3F25EC00D4E916 /* SMBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBaseRequest.swift; sourceTree = "<group>"; };
@@ -94,9 +98,11 @@
 		F20CDC961D35E56900225D8F /* SMMain */ = {
 			isa = PBXGroup;
 			children = (
+				F2CB74AD1D87FEDF00F0D94A /* Route */,
 				F2E4D5021D3F25C700D4E916 /* Request */,
 				F20CDC971D35E56900225D8F /* AppDelegate.swift */,
 				F20CDC991D35E56900225D8F /* ViewController.swift */,
+				F2CB74A81D87EF4300F0D94A /* TestRefreshTableViewController.swift */,
 				F2A536061D8687AE00994591 /* Test2ViewController.swift */,
 				F20CDC9B1D35E56900225D8F /* Main.storyboard */,
 				F20CDC9E1D35E56900225D8F /* Assets.xcassets */,
@@ -104,6 +110,15 @@
 				F20CDCA31D35E56900225D8F /* Info.plist */,
 			);
 			path = SMMain;
+			sourceTree = "<group>";
+		};
+		F2CB74AD1D87FEDF00F0D94A /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				F2CB74AE1D87FF0300F0D94A /* TestRBPageCenter.swift */,
+			);
+			name = Route;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		F2E4D4DA1D3E197900D4E916 /* Frameworks */ = {
@@ -205,7 +220,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F20CDC9A1D35E56900225D8F /* ViewController.swift in Sources */,
+				F2CB74AF1D87FF0300F0D94A /* TestRBPageCenter.swift in Sources */,
 				F2A536071D8687AE00994591 /* Test2ViewController.swift in Sources */,
+				F2CB74A91D87EF4300F0D94A /* TestRefreshTableViewController.swift in Sources */,
 				F2E4D5041D3F25EC00D4E916 /* SMBaseRequest.swift in Sources */,
 				F2E4D5081D3F2A1D00D4E916 /* Reachability.swift in Sources */,
 				F20CDC981D35E56900225D8F /* AppDelegate.swift in Sources */,
