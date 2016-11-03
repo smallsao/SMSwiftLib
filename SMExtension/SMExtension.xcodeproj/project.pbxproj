@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2143CCE1DC6DD1E00D4135F /* SMEString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2143CCD1DC6DD1E00D4135F /* SMEString.swift */; };
+		F2143CD01DC6DD7900D4135F /* SMEArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2143CCF1DC6DD7900D4135F /* SMEArray.swift */; };
+		F2143CD21DC6DDA000D4135F /* SMEDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2143CD11DC6DDA000D4135F /* SMEDictionary.swift */; };
+		F2143CD41DC6DE0B00D4135F /* SMEColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2143CD31DC6DE0B00D4135F /* SMEColor.swift */; };
+		F2143CD61DC6DE2900D4135F /* SMEData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2143CD51DC6DE2900D4135F /* SMEData.swift */; };
+		F2143CD71DC6DE6E00D4135F /* SMEString.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2143CCD1DC6DD1E00D4135F /* SMEString.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2143CD81DC6DE6E00D4135F /* SMEArray.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2143CCF1DC6DD7900D4135F /* SMEArray.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2143CD91DC6DE6E00D4135F /* SMEDictionary.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2143CD11DC6DDA000D4135F /* SMEDictionary.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2143CDA1DC6DE6E00D4135F /* SMEColor.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2143CD31DC6DE0B00D4135F /* SMEColor.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2143CDB1DC6DE6E00D4135F /* SMEData.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2143CD51DC6DE2900D4135F /* SMEData.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F286BF5F1D751B42004EE5AE /* SMExtension.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF5E1D751B42004EE5AE /* SMExtension.xcassets */; };
 		F2B076151D35FD1600928FB9 /* SMExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B076141D35FD1600928FB9 /* SMExtension.swift */; };
 		F2B0761C1D35FE1E00928FB9 /* SMExtension.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2B076141D35FD1600928FB9 /* SMExtension.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -15,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2143CCD1DC6DD1E00D4135F /* SMEString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMEString.swift; sourceTree = "<group>"; };
+		F2143CCF1DC6DD7900D4135F /* SMEArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMEArray.swift; sourceTree = "<group>"; };
+		F2143CD11DC6DDA000D4135F /* SMEDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMEDictionary.swift; sourceTree = "<group>"; };
+		F2143CD31DC6DE0B00D4135F /* SMEColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMEColor.swift; sourceTree = "<group>"; };
+		F2143CD51DC6DE2900D4135F /* SMEData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMEData.swift; sourceTree = "<group>"; };
 		F286BF5E1D751B42004EE5AE /* SMExtension.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SMExtension.xcassets; sourceTree = "<group>"; };
 		F2B076091D35FD0A00928FB9 /* SMExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B0760E1D35FD0A00928FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +71,11 @@
 				F2B0760E1D35FD0A00928FB9 /* Info.plist */,
 				F2B076141D35FD1600928FB9 /* SMExtension.swift */,
 				F2E4D49C1D3E127700D4E916 /* SMUIKitExtension.swift */,
+				F2143CCD1DC6DD1E00D4135F /* SMEString.swift */,
+				F2143CCF1DC6DD7900D4135F /* SMEArray.swift */,
+				F2143CD11DC6DDA000D4135F /* SMEDictionary.swift */,
+				F2143CD31DC6DE0B00D4135F /* SMEColor.swift */,
+				F2143CD51DC6DE2900D4135F /* SMEData.swift */,
 			);
 			path = SMExtension;
 			sourceTree = "<group>";
@@ -69,6 +89,11 @@
 			files = (
 				F2B0761C1D35FE1E00928FB9 /* SMExtension.swift in Headers */,
 				F2E4D49E1D3E128200D4E916 /* SMUIKitExtension.swift in Headers */,
+				F2143CD71DC6DE6E00D4135F /* SMEString.swift in Headers */,
+				F2143CD81DC6DE6E00D4135F /* SMEArray.swift in Headers */,
+				F2143CD91DC6DE6E00D4135F /* SMEDictionary.swift in Headers */,
+				F2143CDA1DC6DE6E00D4135F /* SMEColor.swift in Headers */,
+				F2143CDB1DC6DE6E00D4135F /* SMEData.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +168,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2143CCE1DC6DD1E00D4135F /* SMEString.swift in Sources */,
+				F2143CD41DC6DE0B00D4135F /* SMEColor.swift in Sources */,
+				F2143CD01DC6DD7900D4135F /* SMEArray.swift in Sources */,
 				F2E4D49D1D3E127700D4E916 /* SMUIKitExtension.swift in Sources */,
+				F2143CD21DC6DDA000D4135F /* SMEDictionary.swift in Sources */,
+				F2143CD61DC6DE2900D4135F /* SMEData.swift in Sources */,
 				F2B076151D35FD1600928FB9 /* SMExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +275,7 @@
 		F2B076121D35FD0A00928FB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -258,6 +289,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.koudai.weidian.smallsao.SMExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";
 			};
@@ -266,6 +298,7 @@
 		F2B076131D35FD0A00928FB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

@@ -14,5 +14,5 @@ extension UISlider {
 
 
 class SMSlider: UISlider {
-    
+
 }

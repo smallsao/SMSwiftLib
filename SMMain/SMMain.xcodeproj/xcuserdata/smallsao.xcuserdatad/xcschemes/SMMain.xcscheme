@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F2143CE51DC6DF0E00D4135F"
+               BuildableName = "SMTools.framework"
+               BlueprintName = "SMTools"
+               ReferencedContainer = "container:../SMTools/SMTools.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F2E4D4C31D3E130800D4E916"
                BuildableName = "SMUIKit.framework"
                BlueprintName = "SMUIKit"

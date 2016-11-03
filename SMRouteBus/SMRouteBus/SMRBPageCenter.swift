@@ -1,93 +1,108 @@
 //
-//  SMRBPageCenter.swift
+//  SMPageCenter.swift
 //  SMRouteBus
 //
-//  Created by smallsao on 16/9/13.
+//  Created by smallsao on 16/9/19.
 //  Copyright © 2016年 smallsao. All rights reserved.
 //
 
 import UIKit
-import SMExtension
-import SMUIKit
 
-
-public class SMRBPageCenter: NSObject,SMRoutePageProtocol {
+public class SMRBPageCenter: NSObject {
     
-    var mapData = Dictionary<String, String>()
+    var pageMapping:Dictionary<String, String> = [:]
     
-    public func open(pageId:String, params:Dictionary<String, AnyObject>?, complete:()->Void) {
-        // 根据pageId 找到相关的 ViewController
-        let vcFrom = navigationController().topViewController
-        let vcTo = createViewController(pageId: pageId)
+    static var standard : SMRBPageCenter {
+        struct Static {
+            static let instance : SMRBPageCenter = SMRBPageCenter()
+        }
         
-        if let k = vcTo {
-            if k.conforms(to: #protocol(SMRoutePageProtocol)) {
-                
+        
+//        Static.instance.configMapData()
+        
+        return Static.instance
+    }
+    
+    public func open(url: String) {
+        self.open(url: url, params: nil, animated:true, complete: nil)
+    }
+    
+    public func open(url: String, animated: Bool) {
+        self.open(url: url, params: nil, animated:animated, complete: nil)
+    }
+    
+    public func open(url: String, params:Dictionary<String, AnyObject>) {
+        self.open(url: url, params: params, animated:true, complete: nil)
+    }
+    
+    public func open(url: String, params: Dictionary<String, AnyObject>, animated: Bool) {
+        self.open(url: url, params: params, animated:animated, complete: nil)
+    }
+    
+    public func open(url:String, params:Dictionary<String, AnyObject>?, complete:((_ fromViewController:UIViewController, _ toViewController:UIViewController)->Void)?) {
+        self.open(url: url, params: params, animated:true, complete: complete)
+    }
+    
+    public func open(url:String, params:Dictionary<String, AnyObject>?, animated: Bool, complete:((_ fromViewController:UIViewController, _ toViewController:UIViewController)->Void)?) {
+        
+        
+        /**
+        url -> url
+        http:// -> http://
+        
+        url -> classname
+        http:// -> cn
+        
+        pageid -> url
+        page:// -> http://
+        
+        pageid -> classname
+        page:// -> cn
+        **/
+
+        // 先解析url， 去除URL中的？以后的数据，或者直接url
+        let urlModel = SMRBUrl.parse(aUrl: url, aParams: params)
+        if let model = urlModel {
+            // 只接受有前缀，并且前缀为 page、http、https的协议
+            // 1. 查找model.url 是否在字典表中有转义
+            var original = ""
+            if "page" == model.scheme {
+                let pageMap = pageMapping[model.host]
+                if let k = pageMap {
+                    original = k
+                }
+                else {
+                    print("page not found: \(url)")
+                    return
+                }
             }
-            if let currentVC = k as? SMRoutePageProtocol {
-                //currentVC responds to the MyCustomProtocol protocol =]
+            else if "http" == model.scheme || "https" == model.scheme {
+                let pageMap = pageMapping[model.url]
+                if let k = pageMap {
+                    original = k
+                }
+                else {
+                    original = model.url
+                }
             }
-            // 传递参数
-//            k.responds(to: #selector(WDSPageProtocol)) {
-//                let p = k as WDSPageProtocol
-//                p.
-//            }
+            else {
+                // 其他不予考虑
+                print("page ignore: \(url)")
+                return
+            }
+            
+            // 对 original 进行处理
+            
+            
         }
         else {
-//            不存在页面，什么都不做
+            // url 为空
+            print("page is empty: \(url)")
+            return
         }
         
     }
     
-    public func service(serviceId:String, params:Dictionary<String, AnyObject>, complete:()->Void) {
-        
-    }
-    
-    public func message(serviceId:String, source:String, params:Dictionary<String, AnyObject>, complete:()->Void) {
-        
-    }
     
     
-    
-    func navigationController() -> UINavigationController {
-        let appDelegate = UIApplication.shared().delegate
-        return appDelegate?.window?!.rootViewController as! UINavigationController
-    }
-    
-    
-    func createViewController(pageId: String) -> SMBaseViewController? {
-        let cls = convertClass(byPageId: pageId)
-        let vc: SMBaseViewController.Type = cls as! SMBaseViewController.Type
-        let viewController = vc.init()
-        
-        return viewController
-        
-    }
-    
-    func convert(pageId:String) -> UIViewController? {
-        var vc = findViewController(byPageId: pageId)
-        return vc
-    }
-    
-    func findViewController(byPageId:String) -> UIViewController? {
-        var cls = convertClass(byPageId: byPageId)
-        
-        if let k = cls {
-            return k as! UIViewController
-        }
-        else {
-            return nil
-        }
-    }
-    
-    
-    func convertClass(byPageId:String) -> AnyClass? {
-        let clsName = mapData.stringValue(key: byPageId)
-        var cls = NSClassFromString(clsName)
-        if cls == nil {
-            cls = NSClassFromString(byPageId)
-        }
-        
-        return cls
-    }
 }

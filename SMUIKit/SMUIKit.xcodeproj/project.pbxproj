@@ -10,19 +10,30 @@
 		F206CC771D643E470044B76D /* SMBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F206CC761D643E470044B76D /* SMBaseViewController.swift */; };
 		F206CC791D643E670044B76D /* SMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F206CC781D643E670044B76D /* SMViewController.swift */; };
 		F206CC7B1D6440F50044B76D /* SMUIKitUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F206CC7A1D6440F50044B76D /* SMUIKitUtils.swift */; };
+		F2143CF91DC6E32400D4135F /* SMTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2143CF81DC6E32400D4135F /* SMTools.framework */; };
+		F2143D311DC6E4D400D4135F /* SMExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27285F21D64691500AAE485 /* SMExtension.framework */; };
+		F2143D371DC6E6F200D4135F /* SMUIKitUtils.swift in Headers */ = {isa = PBXBuildFile; fileRef = F206CC7A1D6440F50044B76D /* SMUIKitUtils.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2143D391DC6E6F200D4135F /* SMView.swift in Headers */ = {isa = PBXBuildFile; fileRef = F273288A1D3F719B00647F9E /* SMView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2143D3A1DC6E6F200D4135F /* SMButton.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2E4D4E51D3E211600D4E916 /* SMButton.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2143D3B1DC6E6F200D4135F /* SMImageView.swift in Headers */ = {isa = PBXBuildFile; fileRef = F286BF5A1D7449B6004EE5AE /* SMImageView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2143D3C1DC6E6F200D4135F /* SMTextField.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2DFA48A1D40C21C009D4419 /* SMTextField.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2143D3D1DC6E6F200D4135F /* SMSwitch.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2DFA48C1D40C2A9009D4419 /* SMSwitch.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2143D3E1DC6E6F200D4135F /* SMSlider.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2DFA48E1D40C309009D4419 /* SMSlider.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2143D3F1DC6E6F200D4135F /* SMBaseViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = F206CC761D643E470044B76D /* SMBaseViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2143D401DC6E6F200D4135F /* SMViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = F206CC781D643E670044B76D /* SMViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2143D411DC6E6F200D4135F /* SMTableView.swift in Headers */ = {isa = PBXBuildFile; fileRef = F26B40591D8103E6007967F1 /* SMTableView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F26B405A1D8103E6007967F1 /* SMTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26B40591D8103E6007967F1 /* SMTableView.swift */; };
-		F27285F31D64691500AAE485 /* SMExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27285F21D64691500AAE485 /* SMExtension.framework */; };
 		F273288B1D3F719B00647F9E /* SMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273288A1D3F719B00647F9E /* SMView.swift */; };
 		F286BF511D74360A004EE5AE /* SMRefreshTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F286BF501D74360A004EE5AE /* SMRefreshTableView.swift */; };
 		F286BF5B1D7449B6004EE5AE /* SMImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F286BF5A1D7449B6004EE5AE /* SMImageView.swift */; };
 		F286BF611D751B5E004EE5AE /* SMUIKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF601D751B5E004EE5AE /* SMUIKit.xcassets */; };
+		F2A614871DCAD9E9004315E2 /* SMUIFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2A614861DCAD9E9004315E2 /* SMUIFoundation.framework */; };
 		F2C4FF451D86AEB200D8FB41 /* TView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C4FF441D86AEB200D8FB41 /* TView.swift */; };
 		F2DFA48B1D40C21C009D4419 /* SMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFA48A1D40C21C009D4419 /* SMTextField.swift */; };
 		F2DFA48D1D40C2A9009D4419 /* SMSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFA48C1D40C2A9009D4419 /* SMSwitch.swift */; };
 		F2DFA48F1D40C309009D4419 /* SMSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFA48E1D40C309009D4419 /* SMSlider.swift */; };
 		F2E4D4D91D3E144F00D4E916 /* SMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D4D81D3E144F00D4E916 /* SMLabel.swift */; };
 		F2E4D4DE1D3E198A00D4E916 /* SMLabel.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2E4D4D81D3E144F00D4E916 /* SMLabel.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2E4D4E41D3E1C1500D4E916 /* SMUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D4E31D3E1C1500D4E916 /* SMUIKit.swift */; };
 		F2E4D4E61D3E211600D4E916 /* SMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D4E51D3E211600D4E916 /* SMButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,12 +41,14 @@
 		F206CC761D643E470044B76D /* SMBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBaseViewController.swift; sourceTree = "<group>"; };
 		F206CC781D643E670044B76D /* SMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMViewController.swift; sourceTree = "<group>"; };
 		F206CC7A1D6440F50044B76D /* SMUIKitUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUIKitUtils.swift; sourceTree = "<group>"; };
+		F2143CF81DC6E32400D4135F /* SMTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMTools.framework; path = "../SMTools/build/Debug-iphoneos/SMTools.framework"; sourceTree = "<group>"; };
 		F26B40591D8103E6007967F1 /* SMTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTableView.swift; sourceTree = "<group>"; };
 		F27285F21D64691500AAE485 /* SMExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMExtension.framework; path = "../../../Library/Developer/Xcode/DerivedData/SMSwiftLib-dmsxtildlclbwseacevhogmfxmvv/Build/Products/Debug-iphonesimulator/SMExtension.framework"; sourceTree = "<group>"; };
 		F273288A1D3F719B00647F9E /* SMView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMView.swift; sourceTree = "<group>"; };
 		F286BF501D74360A004EE5AE /* SMRefreshTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRefreshTableView.swift; sourceTree = "<group>"; };
 		F286BF5A1D7449B6004EE5AE /* SMImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMImageView.swift; sourceTree = "<group>"; };
 		F286BF601D751B5E004EE5AE /* SMUIKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SMUIKit.xcassets; sourceTree = "<group>"; };
+		F2A614861DCAD9E9004315E2 /* SMUIFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMUIFoundation.framework; path = "../../../Library/Developer/Xcode/DerivedData/SMSwiftLib-dmsxtildlclbwseacevhogmfxmvv/Build/Products/Debug-iphonesimulator/SMUIFoundation.framework"; sourceTree = "<group>"; };
 		F2C4FF441D86AEB200D8FB41 /* TView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TView.swift; sourceTree = "<group>"; };
 		F2DFA48A1D40C21C009D4419 /* SMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTextField.swift; sourceTree = "<group>"; };
 		F2DFA48C1D40C2A9009D4419 /* SMSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSwitch.swift; sourceTree = "<group>"; };
@@ -43,7 +56,6 @@
 		F2E4D4C41D3E130800D4E916 /* SMUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E4D4C81D3E130800D4E916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2E4D4D81D3E144F00D4E916 /* SMLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMLabel.swift; sourceTree = "<group>"; };
-		F2E4D4E31D3E1C1500D4E916 /* SMUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUIKit.swift; sourceTree = "<group>"; };
 		F2E4D4E51D3E211600D4E916 /* SMButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,7 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F27285F31D64691500AAE485 /* SMExtension.framework in Frameworks */,
+				F2A614871DCAD9E9004315E2 /* SMUIFoundation.framework in Frameworks */,
+				F2143D311DC6E4D400D4135F /* SMExtension.framework in Frameworks */,
+				F2143CF91DC6E32400D4135F /* SMTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +76,8 @@
 		F27285F11D64691400AAE485 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2A614861DCAD9E9004315E2 /* SMUIFoundation.framework */,
+				F2143CF81DC6E32400D4135F /* SMTools.framework */,
 				F27285F21D64691500AAE485 /* SMExtension.framework */,
 			);
 			name = Frameworks;
@@ -98,7 +114,6 @@
 			children = (
 				F2E4D4C81D3E130800D4E916 /* Info.plist */,
 				F206CC7A1D6440F50044B76D /* SMUIKitUtils.swift */,
-				F2E4D4E31D3E1C1500D4E916 /* SMUIKit.swift */,
 				F273288A1D3F719B00647F9E /* SMView.swift */,
 				F2E4D4D81D3E144F00D4E916 /* SMLabel.swift */,
 				F2E4D4E51D3E211600D4E916 /* SMButton.swift */,
@@ -123,6 +138,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2E4D4DE1D3E198A00D4E916 /* SMLabel.swift in Headers */,
+				F2143D371DC6E6F200D4135F /* SMUIKitUtils.swift in Headers */,
+				F2143D391DC6E6F200D4135F /* SMView.swift in Headers */,
+				F2143D3A1DC6E6F200D4135F /* SMButton.swift in Headers */,
+				F2143D3B1DC6E6F200D4135F /* SMImageView.swift in Headers */,
+				F2143D3C1DC6E6F200D4135F /* SMTextField.swift in Headers */,
+				F2143D3D1DC6E6F200D4135F /* SMSwitch.swift in Headers */,
+				F2143D3E1DC6E6F200D4135F /* SMSlider.swift in Headers */,
+				F2143D3F1DC6E6F200D4135F /* SMBaseViewController.swift in Headers */,
+				F2143D401DC6E6F200D4135F /* SMViewController.swift in Headers */,
+				F2143D411DC6E6F200D4135F /* SMTableView.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F206CC7B1D6440F50044B76D /* SMUIKitUtils.swift in Sources */,
-				F2E4D4E41D3E1C1500D4E916 /* SMUIKit.swift in Sources */,
 				F2E4D4D91D3E144F00D4E916 /* SMLabel.swift in Sources */,
 				F2DFA48B1D40C21C009D4419 /* SMTextField.swift in Sources */,
 				F2DFA48D1D40C2A9009D4419 /* SMSwitch.swift in Sources */,
@@ -323,6 +347,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";
 				INFOPLIST_FILE = SMUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -345,6 +370,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";
 				INFOPLIST_FILE = SMUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

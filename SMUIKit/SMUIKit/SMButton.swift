@@ -47,10 +47,10 @@ extension UIButton {
         var titleSize = (self.titleLabel?.frame.size)!
 
         self.imageEdgeInsets = UIEdgeInsetsMake(0.0, -imageSize.width - space / 2, 0, 0)
-        self.imageView?.backgroundColor = UIColor.yellow()
+        self.imageView?.backgroundColor = UIColor.yellow
         
         self.titleEdgeInsets = UIEdgeInsetsMake(0, imageSize.width + space / 2, 0, 0)
-        self.titleLabel?.backgroundColor = UIColor.red()
+        self.titleLabel?.backgroundColor = UIColor.red
     }
     
     // about image from url

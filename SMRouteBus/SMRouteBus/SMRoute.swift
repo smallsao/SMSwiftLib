@@ -8,11 +8,7 @@
 
 import UIKit
 
-public protocol SMRoutePageProtocol:NSObjectProtocol {
-    func open(pageId:String, params:Dictionary<String, AnyObject>?, complete:()->Void)
-    func service(serviceId:String, params:Dictionary<String, AnyObject>, complete:()->Void)
-    func message(serviceId:String, source:String, params:Dictionary<String, AnyObject>, complete:()->Void)
-}
+
 
 public class SMRoute: NSObject {
     public static let standard = SMRoute()

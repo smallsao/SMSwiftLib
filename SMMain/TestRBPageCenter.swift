@@ -7,30 +7,37 @@
 //
 
 import UIKit
+import SMUIKit
 import SMRouteBus
 
-class TestRBPageCenter: SMRBPageCenter {
+class TestRBPageCenter: SMBasePageCenter {
     
-    static var standard : TestRBPageCenter {
-        struct Static {
-            static let instance : TestRBPageCenter = TestRBPageCenter()
-        }
-        
-        
-        Static.instance.configMapData()
-        
-        return Static.instance
-    }
+   
     
     func configMapData() {
-        mapData = ["A":"Test2ViewController"]
+        self.mapData = ["A":"Test2ViewController"]
     }
     
-    override func open(pageId:String, params:Dictionary<String, AnyObject>?, complete:()->Void) {
+    override func open(pageId:String, params:Dictionary<String, AnyObject>?, complete:((_ fromViewController:UIViewController, _ toViewController:UIViewController)->Void)?) {
         // 根据pageId 找到相关的 ViewController
-        super.open(pageId: pageId, params: params, complete: complete)
+        let vcFrom = self.navigationController().topViewController
+        let vcTo = self.createViewController(pageId: pageId)
+        
+        
+        
+        if let k = vcTo {
+            k.receiveRoute(data: params)
+            if let p = complete {
+                p(vcFrom!,k)
+            }
+        }
+        else {
+            //            不存在页面，什么都不做
+//            not found
+        }
         
     }
+
     
     override func service(serviceId:String, params:Dictionary<String, AnyObject>, complete:()->Void) {
         
@@ -38,6 +45,10 @@ class TestRBPageCenter: SMRBPageCenter {
     
     override func message(serviceId:String, source:String, params:Dictionary<String, AnyObject>, complete:()->Void) {
         
+    }
+    
+    override func showErrorMsg() {
+        super.showErrorMsg()
     }
     
 }

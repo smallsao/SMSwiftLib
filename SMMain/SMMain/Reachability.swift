@@ -57,17 +57,25 @@ public class Reachability {
     
     func connectionStatus() -> ReachabilityStatus {
         var zeroAddress = sockaddr_in()
-        zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
+        zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
         zeroAddress.sin_family = sa_family_t(AF_INET)
+
         
-        guard let defaultRouteReachability = withUnsafePointer(&zeroAddress, {
-            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
-        }) else {
-            return .Unknown
+        let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
+                SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
+            }
         }
         
+        
+//        guard let defaultRouteReachability = withUnsafePointer(to: &zeroAddress, {
+//            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
+//        }) else {
+//            return .Unknown
+//        }
+        
         var flags : SCNetworkReachabilityFlags = []
-        if !SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) {
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
             return .Unknown
         }
         
@@ -88,13 +96,13 @@ public class Reachability {
             
             }, &context)
         
-        SCNetworkReachabilityScheduleWithRunLoop(reachability, CFRunLoopGetMain(), "")
+        SCNetworkReachabilityScheduleWithRunLoop(reachability, CFRunLoopGetMain(), "" as CFString)
     }
     
 }
 
 extension ReachabilityStatus {
-    private init(reachabilityFlags flags: SCNetworkReachabilityFlags) {
+    internal init(reachabilityFlags flags: SCNetworkReachabilityFlags) {
         let connectionRequired = flags.contains(.connectionRequired)
         let isReachable = flags.contains(.reachable)
         let isWWAN = flags.contains(.isWWAN)

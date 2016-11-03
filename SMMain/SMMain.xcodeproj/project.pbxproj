@@ -12,6 +12,10 @@
 		F20CDC9D1D35E56900225D8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20CDC9B1D35E56900225D8F /* Main.storyboard */; };
 		F20CDC9F1D35E56900225D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20CDC9E1D35E56900225D8F /* Assets.xcassets */; };
 		F20CDCA21D35E56900225D8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20CDCA01D35E56900225D8F /* LaunchScreen.storyboard */; };
+		F2143CF61DC6E22900D4135F /* SMTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2143CF51DC6E22900D4135F /* SMTools.framework */; };
+		F2143D2B1DC6E49000D4135F /* SMUIFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2143D2A1DC6E49000D4135F /* SMUIFoundation.framework */; };
+		F2143D2C1DC6E49000D4135F /* SMUIFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2143D2A1DC6E49000D4135F /* SMUIFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F241C8571D8F98F800835E0F /* TestRoutePageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F241C8561D8F98F800835E0F /* TestRoutePageProtocol.swift */; };
 		F286BF631D751B70004EE5AE /* SMUIKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF621D751B70004EE5AE /* SMUIKit.xcassets */; };
 		F286BF651D751B77004EE5AE /* SMExtension.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF641D751B77004EE5AE /* SMExtension.xcassets */; };
 		F2A536071D8687AE00994591 /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A536061D8687AE00994591 /* Test2ViewController.swift */; };
@@ -33,6 +37,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F2143D2C1DC6E49000D4135F /* SMUIFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +52,9 @@
 		F20CDC9E1D35E56900225D8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F20CDCA11D35E56900225D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F20CDCA31D35E56900225D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2143CF51DC6E22900D4135F /* SMTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMTools.framework; path = "../SMTools/build/Debug-iphoneos/SMTools.framework"; sourceTree = "<group>"; };
+		F2143D2A1DC6E49000D4135F /* SMUIFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SMUIFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F241C8561D8F98F800835E0F /* TestRoutePageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRoutePageProtocol.swift; sourceTree = "<group>"; };
 		F286BF621D751B70004EE5AE /* SMUIKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SMUIKit.xcassets; path = ../SMUIKit/SMUIKit.xcassets; sourceTree = "<group>"; };
 		F286BF641D751B77004EE5AE /* SMExtension.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SMExtension.xcassets; path = ../SMExtension/SMExtension.xcassets; sourceTree = "<group>"; };
 		F2A536061D8687AE00994591 /* Test2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2143D2B1DC6E49000D4135F /* SMUIFoundation.framework in Frameworks */,
+				F2143CF61DC6E22900D4135F /* SMTools.framework in Frameworks */,
 				F2CB749C1D87EC1E00F0D94A /* SMRouteBus.framework in Frameworks */,
 				F2E4D4E21D3E1A6100D4E916 /* SMUIKit.framework in Frameworks */,
 				F2B0761B1D35FDE900928FB9 /* SMExtension.framework in Frameworks */,
@@ -78,6 +88,7 @@
 		F20CDC8B1D35E56900225D8F = {
 			isa = PBXGroup;
 			children = (
+				F2143D2A1DC6E49000D4135F /* SMUIFoundation.framework */,
 				F286BF621D751B70004EE5AE /* SMUIKit.xcassets */,
 				F286BF641D751B77004EE5AE /* SMExtension.xcassets */,
 				F2E4D4E71D3E2ABA00D4E916 /* remove_item.png */,
@@ -116,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				F2CB74AE1D87FF0300F0D94A /* TestRBPageCenter.swift */,
+				F241C8561D8F98F800835E0F /* TestRoutePageProtocol.swift */,
 			);
 			name = Route;
 			path = ..;
@@ -124,6 +136,7 @@
 		F2E4D4DA1D3E197900D4E916 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2143CF51DC6E22900D4135F /* SMTools.framework */,
 				F2CB749B1D87EC1E00F0D94A /* SMRouteBus.framework */,
 				F2E4D4E11D3E1A6100D4E916 /* SMUIKit.framework */,
 				F2B0761A1D35FDE900928FB9 /* SMExtension.framework */,
@@ -226,6 +239,7 @@
 				F2E4D5041D3F25EC00D4E916 /* SMBaseRequest.swift in Sources */,
 				F2E4D5081D3F2A1D00D4E916 /* Reachability.swift in Sources */,
 				F20CDC981D35E56900225D8F /* AppDelegate.swift in Sources */,
+				F241C8571D8F98F800835E0F /* TestRoutePageProtocol.swift in Sources */,
 				F2E4D50A1D3F4E7800D4E916 /* TestRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

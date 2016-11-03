@@ -25,9 +25,9 @@ class TestRefreshTableViewController: SMBaseViewController, SMRefreshTableViewDe
         self.view.addSubview(tableView)
         
         tableView.needRefresh(header: true, footer: true)
-        tableView.backgroundColor = UIColor.green()
+        tableView.backgroundColor = UIColor.green
         
-        self.view.backgroundColor = UIColor.yellow()
+        self.view.backgroundColor = UIColor.yellow
         
         
         for i in 1...10 {

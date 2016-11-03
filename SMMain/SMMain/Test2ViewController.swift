@@ -11,14 +11,14 @@ import UIKit
 import SMExtension
 import SMUIKit
 
-class Test2ViewController: SMBaseViewController {
+open class Test2ViewController: SMBaseViewController {
 
     var button:SMButton?
     
     var label:SMLabel?
     var smView:SMView?
     
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -26,10 +26,10 @@ class Test2ViewController: SMBaseViewController {
         button.frame = CGRect.init(x: 20, y: 20, width: 80, height: 80)
         button.setTitle("按钮", for:UIControlState.normal)
         self.view.addSubview(button);
-        button.setTitleColor(UIColor.green(), for: .normal)
+        button.setTitleColor(UIColor.green, for: .normal)
         button.addTarget(self,action:#selector(tapped),for:.touchUpInside)
-        button.setBackgroundColor(UIColor.yellow(), for: .normal)
-        button.setBackgroundColor(UIColor.blue(), for: .highlighted)
+        button.setBackgroundColor(UIColor.yellow, for: .normal)
+        button.setBackgroundColor(UIColor.blue, for: .highlighted)
         
         button.setImage(UIImage.init(named: "remove_item"), for: .normal)
         button.centerVImageAndTitle(space: 10)
@@ -37,7 +37,7 @@ class Test2ViewController: SMBaseViewController {
         
         let label:SMLabel = SMLabel()
         label.frame = CGRect.init(x: 120, y: 20, width: 80, height: 80)
-        label.backgroundColor = UIColor.green()
+        label.backgroundColor = UIColor.green
         label.text = ""
         label.addTarget(self, action: #selector(tappedLabel), for: .touchUpInside)
         self.view.addSubview(label)
@@ -48,11 +48,11 @@ class Test2ViewController: SMBaseViewController {
         let smView:SMView = SMView()
         self.view.addSubview(smView)
         smView.frame = CGRect(x: 220, y: 20, width: 80, height: 80)
-        smView.backgroundColor = UIColor.yellow()
+        smView.backgroundColor = UIColor.yellow
         
         //        smView.addLine(style: .SMBorderStyleLeft, color: UIColor.red(), width: 1, padding: 10)
         //        smView.addBorder(styles: [.SMBorderStyleTop, .SMBorderStyleLeft, .SMBorderStyleRight, .SMBorderStyleBottom], color: UIColor.green(), width: 0.5)
-        smView.addDashed(color: UIColor.gray(), width: 0.5, space: 1)
+        smView.addDashed(color: UIColor.gray, width: 0.5, space: 1)
         smView.addRedDot()
         
         
@@ -64,38 +64,39 @@ class Test2ViewController: SMBaseViewController {
         
     }
     
-    override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func tappedLabel() {
-        self.hideLoadingToast()
-        self.hideToast()
+        self.hideLoadingMask()
+//        self.hideToast()
         
         //        self.button?.addNumberDot(number: "但是")
         //        self.label?.addRedDot()
         //        self.smView?.addRedDot()
         
         
-        //        print("label")
-        //        let testRequest = TestRequest()
-        //        testRequest.id = "111"
-        //        testRequest.name = "smallsao"
-        //        testRequest.sendRequest(success: {
-        //            (data: AnyObject) in
-        //            print("   .............  \(data)")
-        //
-        //            }, serviceException: {
-        //                (error: NSError) in
-        //                print("   .............  \(error.description)")
-        //            }, networkException: {
-        //                (error: NSError) in
-        //
-        //        })
+//                print("label")
+//                let testRequest = TestRequest()
+//                testRequest.id = "111"
+//                testRequest.name = "smallsao"
+//                testRequest.sendRequest(success: {
+//                    (data: AnyObject) in
+//                    print("   .............  \(data)")
+//        
+//                    }, serviceException: {
+//                        (error: NSError) in
+//                        print("   .............  \(error.description)")
+//                    }, networkException: {
+//                        (error: NSError) in
+//        
+//                })
     }
     
     func tapped (){
+        self.showLoadingMask()
         
         //        self.ArrayExtension()
         //
@@ -109,12 +110,12 @@ class Test2ViewController: SMBaseViewController {
         //        self.showToast(tip: "ssssss", duration: Float(5.0))
         
         //        self.showLoadingToast()
-        self.showToast(view: self.view as! SMView, tip: "dsfjasldfjl", duration: 10, completion:
-            {
-                () in
-                
-                
-        })
+//        self.showToast(view: self.view as! SMView, tip: "dsfjasldfjl", duration: 10, completion:
+//            {
+//                () in
+//                
+//                
+//        })
         
     }
     
@@ -131,7 +132,7 @@ class Test2ViewController: SMBaseViewController {
             0,
             1,
             -1
-        ]
+        ] as [Any]
         print(a.stringValue(index: 1))
         print(a.stringValue(index: 2))
         print(a.stringValue(index: 3))
@@ -183,9 +184,9 @@ class Test2ViewController: SMBaseViewController {
     }
     
     func dictExtension (){
-        var dict = Dictionary<String, AnyObject>()
+        var dict = Dictionary<String, Any>()
         dict = [
-            "String":"-17",
+            "String":"-17" ,
             "String2":"b-17.2aa",
             "Int":11,
             "IntString":"130",
@@ -196,7 +197,7 @@ class Test2ViewController: SMBaseViewController {
             "BOOL":0,
             "BOOL2":1,
             "BOOL3":-1
-        ]
+            ]
         
         print("\n\n\n=====================  String  =====================\n")
         print("String from String           :    \(dict.stringValue(key: "String"))")

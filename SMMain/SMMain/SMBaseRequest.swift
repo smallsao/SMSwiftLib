@@ -25,7 +25,7 @@ public class SMBaseRequest: NSObject, NSURLConnectionDataDelegate {
      - returns:
      */
     override init() {
-        self.url = URL(string: "")!
+        url = URL(string: "test")!
         super.init()
     }
 
@@ -77,18 +77,18 @@ public class SMBaseRequest: NSObject, NSURLConnectionDataDelegate {
         return NSError()
     }
     
-    public func sendRequest(success:(AnyObject) -> Void, serviceException:(NSError) -> Void, networkException: (NSError) -> Void ) {
+    public func sendRequest(success:@escaping (AnyObject) -> Void, serviceException:@escaping (Error) -> Void, networkException: @escaping (Error) -> Void ) {
         let rStatus = Reachability().connectionStatus()
         if rStatus.description == ReachabilityStatus.Offline.description || rStatus.description == ReachabilityStatus.Unknown.description {
             //网络不通
-            var userInfo = Dictionary<String, AnyObject>()
+            var userInfo = Dictionary<String, Any>()
             userInfo["status"] = ["status_reason":"网络似乎存在问题"]
             let error = NSError(domain: "network not reachable", code: 100000, userInfo: userInfo)
             
             networkException(error)
             
             
-            NotificationCenter().post(name: "NOTIFICATION_NETWWORK_NOT_REACHABLE" as NSNotification.Name, object: nil)
+            NotificationCenter().post(name: Notification.Name("NOTIFICATION_NETWWORK_NOT_REACHABLE"), object: nil)
             return
         }
         else if !validateParameter() {
@@ -109,8 +109,8 @@ public class SMBaseRequest: NSObject, NSURLConnectionDataDelegate {
         var request: URLRequest = URLRequest(url: url)
         
         do{
-            let data:NSData = try JSONSerialization.data(withJSONObject: self.params, options: JSONSerialization.WritingOptions.prettyPrinted)
-            request.httpBody = data as Data
+            let data:Data = try JSONSerialization.data(withJSONObject: self.params, options: JSONSerialization.WritingOptions.prettyPrinted)
+            request.httpBody = data
         }catch{
             
         }
@@ -120,22 +120,22 @@ public class SMBaseRequest: NSObject, NSURLConnectionDataDelegate {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         
-        session.dataTask(with: request, completionHandler:{
-            (data: Data?, response: URLResponse?, err: NSError?) -> Void in
+        session.dataTask(with: request, completionHandler: {
+            data, response, err in
             var error = err
-            if error == nil{
+            if error == nil {
                 let rString = String(data: data!, encoding: .utf8)
                 print(rString)
-
+                
                 let dict = Dictionary<String, AnyObject>()
                 error = self.checkResponseCode(respData: dict as Dictionary<String, AnyObject>)
-                if error == nil {
-                    serviceException(error!)
+                if let e = error {
+                    serviceException(e)
                 }
                 else {
                     let (dataErr, rData) = self.parseResponseData(respData: dict)
-                    if dataErr != nil {
-                        serviceException(dataErr!)
+                    if let de = dataErr {
+                        serviceException(de)
                     }
                     else {
                         success(rData!)
@@ -146,10 +146,6 @@ public class SMBaseRequest: NSObject, NSURLConnectionDataDelegate {
                 networkException(error!)
             }
         }).resume()
-//        print(task.state)
-//        task.resume()
-//        print(task.state)
-        
     }
     
     

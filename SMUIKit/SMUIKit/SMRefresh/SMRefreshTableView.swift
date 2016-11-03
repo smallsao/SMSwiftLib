@@ -9,6 +9,7 @@
 import UIKit
 
 import SMExtension
+import SMTools
 
 @objc public protocol SMRefreshTableViewDelegate: UITableViewDelegate, NSObjectProtocol {
 
@@ -60,11 +61,11 @@ class SMRefreshTableHeaderView:UIControl {
         self.backgroundColor = SMRGB(0xeeeeee)
         
         vPull = SMView()
-        vPull.backgroundColor = UIColor.clear()
+        vPull.backgroundColor = UIColor.clear
         self.addSubview(vPull)
     
         lbPull = SMLabel()
-        lbPull.backgroundColor = UIColor.clear()
+        lbPull.backgroundColor = UIColor.clear
         lbPull.font = SMBFont(14)
         lbPull.textColor = SMRGB(0x666666)
         lbPull.textAlignment = .left
@@ -73,7 +74,7 @@ class SMRefreshTableHeaderView:UIControl {
         lbTime = SMLabel()
         lbTime.font = SMFont(10)
         lbTime.textColor = SMRGB(0x9D9D9D)
-        lbTime.backgroundColor = UIColor.clear()
+        lbTime.backgroundColor = UIColor.clear
         lbTime.textAlignment = .left
         vPull.addSubview(lbTime)
     
@@ -196,14 +197,14 @@ class SMRefreshTableHeaderView:UIControl {
             weak var weakSelf = self
             if animated {
                 UIView.animate(withDuration: 0.3, animations: {
-                    weakTable?.contentInset = UIEdgeInsetsZero
+                    weakTable?.contentInset = UIEdgeInsets.zero
                     }, completion: {
                         (finished: Bool) in
                         weakSelf?.viewFinishAnimation()
                 })
             }
             else {
-                weakTable?.contentInset = UIEdgeInsetsZero
+                weakTable?.contentInset = UIEdgeInsets.zero
                 viewFinishAnimation()
             }
         }
@@ -241,7 +242,7 @@ class SMRefreshTableFooterView:UIControl {
         lbTitle = SMLabel()
         lbTitle.font = SMBFont(14)
         lbTitle.textColor = SMRGB(0x9A9A9A)
-        lbTitle.backgroundColor = UIColor.clear()
+        lbTitle.backgroundColor = UIColor.clear
         lbTitle.textAlignment = .center
         lbTitle.autoresizingMask = .flexibleWidth
         self.addSubview(lbTitle)
