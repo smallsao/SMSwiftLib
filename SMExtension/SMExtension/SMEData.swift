@@ -11,5 +11,13 @@ import Foundation
 
 
 extension Data {
-    
+    public var x:CGFloat {
+        get {
+            return 0
+        }
+        
+        set {
+            
+        }
+    }
 }

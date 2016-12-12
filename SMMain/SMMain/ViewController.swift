@@ -22,6 +22,8 @@ class ViewController: SMBaseViewController {
 //        SMRoute.standard.route(pageId: "page://xxxx", params: Dictionary<String, AnyObject>())
         
         
+        
+        
         let button:SMButton = SMButton(type:.custom)
         button.frame = CGRect.init(x: 20, y: 100, width: 80, height: 80)
         button.setTitle("按钮", for:UIControlState.normal)
@@ -45,11 +47,10 @@ class ViewController: SMBaseViewController {
         
         self.view.addSubview(button)
         self.view.addSubview(label)
-
         
         
-        
-        
+        let pp = SMViewController()
+        pp.hhh = 1
         
         
     }
@@ -107,3 +108,9 @@ class ViewController: SMBaseViewController {
     @objc optional func requestFinished(request: HttpRequestDelegate!, downloadData: NSMutableData!)
 
 }
+
+
+
+
+
+

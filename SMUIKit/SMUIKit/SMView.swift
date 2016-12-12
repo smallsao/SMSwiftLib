@@ -266,5 +266,16 @@ open class SMView: UIView {
 
 
 extension SMView {
-    
+//    public var kkkkkk:String?
+//    public var _hhh:String?
+//    public var hhh:String? {
+//        get {
+//            return self._hhh
+//        }
+//        
+//        set {
+////            
+//            self._hhh = newValue;
+//        }
+//    }
 }

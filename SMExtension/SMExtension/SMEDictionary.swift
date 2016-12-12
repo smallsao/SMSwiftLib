@@ -30,7 +30,7 @@ extension Dictionary {
             return ""
         }
         else {
-            return obj2Str(obj: value as! AnyObject)
+            return obj2Str(obj: value as AnyObject)
         }
     }
     

@@ -12,6 +12,29 @@ import SMUIFoundation
 
 open class SMViewController: UIViewController,CAAnimationDelegate {
     
+    public var _hhh:Int? {
+        willSet {
+            
+            print("willSet: \(newValue)  \(self._hhh)")
+        }
+        
+        didSet {
+            print("didSet: \(oldValue)")
+
+        }
+    }
+    public var hhh:Int?
+        {
+        get {
+            return nil//self._hhh
+        }
+        
+        set {
+            self._hhh = newValue
+        }
+    }
+    
+    
     var callback:(()->Void )?
     
     open override func viewDidLoad() {
