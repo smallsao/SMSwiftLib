@@ -23,17 +23,23 @@
 		F2143D401DC6E6F200D4135F /* SMViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = F206CC781D643E670044B76D /* SMViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2143D411DC6E6F200D4135F /* SMTableView.swift in Headers */ = {isa = PBXBuildFile; fileRef = F26B40591D8103E6007967F1 /* SMTableView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F26B405A1D8103E6007967F1 /* SMTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26B40591D8103E6007967F1 /* SMTableView.swift */; };
+		F26C0D7E1E9C7BFC00761EF0 /* SMLoadingMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C0D7D1E9C7BFC00761EF0 /* SMLoadingMask.swift */; };
 		F273288B1D3F719B00647F9E /* SMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273288A1D3F719B00647F9E /* SMView.swift */; };
+		F283B4C71EA466EB00125B72 /* SMWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283B4C61EA466EB00125B72 /* SMWebViewController.swift */; };
+		F283B4C81EA4712B00125B72 /* SMWebViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = F283B4C61EA466EB00125B72 /* SMWebViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F283B4C91EA471B700125B72 /* SMLoadingMask.swift in Headers */ = {isa = PBXBuildFile; fileRef = F26C0D7D1E9C7BFC00761EF0 /* SMLoadingMask.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F283B4CA1EA471BA00125B72 /* SMRefreshTableView.swift in Headers */ = {isa = PBXBuildFile; fileRef = F286BF501D74360A004EE5AE /* SMRefreshTableView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F283B4CB1EA471BF00125B72 /* SMTestView.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2EFB7EC1DFE897600D4F73A /* SMTestView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F286BF511D74360A004EE5AE /* SMRefreshTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F286BF501D74360A004EE5AE /* SMRefreshTableView.swift */; };
 		F286BF5B1D7449B6004EE5AE /* SMImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F286BF5A1D7449B6004EE5AE /* SMImageView.swift */; };
 		F286BF611D751B5E004EE5AE /* SMUIKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF601D751B5E004EE5AE /* SMUIKit.xcassets */; };
-		F2A614871DCAD9E9004315E2 /* SMUIFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2A614861DCAD9E9004315E2 /* SMUIFoundation.framework */; };
 		F2DFA48B1D40C21C009D4419 /* SMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFA48A1D40C21C009D4419 /* SMTextField.swift */; };
 		F2DFA48D1D40C2A9009D4419 /* SMSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFA48C1D40C2A9009D4419 /* SMSwitch.swift */; };
 		F2DFA48F1D40C309009D4419 /* SMSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFA48E1D40C309009D4419 /* SMSlider.swift */; };
 		F2E4D4D91D3E144F00D4E916 /* SMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D4D81D3E144F00D4E916 /* SMLabel.swift */; };
 		F2E4D4DE1D3E198A00D4E916 /* SMLabel.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2E4D4D81D3E144F00D4E916 /* SMLabel.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2E4D4E61D3E211600D4E916 /* SMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D4E51D3E211600D4E916 /* SMButton.swift */; };
+		F2EFB7ED1DFE897600D4F73A /* SMTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EFB7EC1DFE897600D4F73A /* SMTestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,12 +48,13 @@
 		F206CC7A1D6440F50044B76D /* SMUIKitUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUIKitUtils.swift; sourceTree = "<group>"; };
 		F2143CF81DC6E32400D4135F /* SMTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMTools.framework; path = "../SMTools/build/Debug-iphoneos/SMTools.framework"; sourceTree = "<group>"; };
 		F26B40591D8103E6007967F1 /* SMTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTableView.swift; sourceTree = "<group>"; };
+		F26C0D7D1E9C7BFC00761EF0 /* SMLoadingMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMLoadingMask.swift; sourceTree = "<group>"; };
 		F27285F21D64691500AAE485 /* SMExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMExtension.framework; path = "../../../Library/Developer/Xcode/DerivedData/SMSwiftLib-dmsxtildlclbwseacevhogmfxmvv/Build/Products/Debug-iphonesimulator/SMExtension.framework"; sourceTree = "<group>"; };
 		F273288A1D3F719B00647F9E /* SMView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMView.swift; sourceTree = "<group>"; };
+		F283B4C61EA466EB00125B72 /* SMWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMWebViewController.swift; sourceTree = "<group>"; };
 		F286BF501D74360A004EE5AE /* SMRefreshTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRefreshTableView.swift; sourceTree = "<group>"; };
 		F286BF5A1D7449B6004EE5AE /* SMImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMImageView.swift; sourceTree = "<group>"; };
 		F286BF601D751B5E004EE5AE /* SMUIKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SMUIKit.xcassets; sourceTree = "<group>"; };
-		F2A614861DCAD9E9004315E2 /* SMUIFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMUIFoundation.framework; path = "../../../Library/Developer/Xcode/DerivedData/SMSwiftLib-dmsxtildlclbwseacevhogmfxmvv/Build/Products/Debug-iphonesimulator/SMUIFoundation.framework"; sourceTree = "<group>"; };
 		F2DFA48A1D40C21C009D4419 /* SMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTextField.swift; sourceTree = "<group>"; };
 		F2DFA48C1D40C2A9009D4419 /* SMSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSwitch.swift; sourceTree = "<group>"; };
 		F2DFA48E1D40C309009D4419 /* SMSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSlider.swift; sourceTree = "<group>"; };
@@ -55,6 +62,7 @@
 		F2E4D4C81D3E130800D4E916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2E4D4D81D3E144F00D4E916 /* SMLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMLabel.swift; sourceTree = "<group>"; };
 		F2E4D4E51D3E211600D4E916 /* SMButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMButton.swift; sourceTree = "<group>"; };
+		F2EFB7EC1DFE897600D4F73A /* SMTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2A614871DCAD9E9004315E2 /* SMUIFoundation.framework in Frameworks */,
 				F2143D311DC6E4D400D4135F /* SMExtension.framework in Frameworks */,
 				F2143CF91DC6E32400D4135F /* SMTools.framework in Frameworks */,
 			);
@@ -71,10 +78,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F26C0D7C1E9C7BFC00761EF0 /* SMControl */ = {
+			isa = PBXGroup;
+			children = (
+				F26C0D7D1E9C7BFC00761EF0 /* SMLoadingMask.swift */,
+			);
+			path = SMControl;
+			sourceTree = "<group>";
+		};
 		F27285F11D64691400AAE485 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F2A614861DCAD9E9004315E2 /* SMUIFoundation.framework */,
 				F2143CF81DC6E32400D4135F /* SMTools.framework */,
 				F27285F21D64691500AAE485 /* SMExtension.framework */,
 			);
@@ -110,6 +124,7 @@
 		F2E4D4C61D3E130800D4E916 /* SMUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				F26C0D7C1E9C7BFC00761EF0 /* SMControl */,
 				F2E4D4C81D3E130800D4E916 /* Info.plist */,
 				F206CC7A1D6440F50044B76D /* SMUIKitUtils.swift */,
 				F273288A1D3F719B00647F9E /* SMView.swift */,
@@ -122,7 +137,9 @@
 				F206CC761D643E470044B76D /* SMBaseViewController.swift */,
 				F206CC781D643E670044B76D /* SMViewController.swift */,
 				F26B40591D8103E6007967F1 /* SMTableView.swift */,
+				F283B4C61EA466EB00125B72 /* SMWebViewController.swift */,
 				F286BF4F1D74360A004EE5AE /* SMRefresh */,
+				F2EFB7EC1DFE897600D4F73A /* SMTestView.swift */,
 			);
 			path = SMUIKit;
 			sourceTree = "<group>";
@@ -145,6 +162,10 @@
 				F2143D3F1DC6E6F200D4135F /* SMBaseViewController.swift in Headers */,
 				F2143D401DC6E6F200D4135F /* SMViewController.swift in Headers */,
 				F2143D411DC6E6F200D4135F /* SMTableView.swift in Headers */,
+				F283B4C81EA4712B00125B72 /* SMWebViewController.swift in Headers */,
+				F283B4CB1EA471BF00125B72 /* SMTestView.swift in Headers */,
+				F283B4CA1EA471BA00125B72 /* SMRefreshTableView.swift in Headers */,
+				F283B4C91EA471B700125B72 /* SMLoadingMask.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +201,7 @@
 				TargetAttributes = {
 					F2E4D4C31D3E130800D4E916 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = S38HQFK7S4;
+						DevelopmentTeam = G379KFU825;
 						DevelopmentTeamName = "hengxing zeng";
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
@@ -226,12 +247,15 @@
 				F2DFA48D1D40C2A9009D4419 /* SMSwitch.swift in Sources */,
 				F2DFA48F1D40C309009D4419 /* SMSlider.swift in Sources */,
 				F273288B1D3F719B00647F9E /* SMView.swift in Sources */,
+				F26C0D7E1E9C7BFC00761EF0 /* SMLoadingMask.swift in Sources */,
 				F206CC791D643E670044B76D /* SMViewController.swift in Sources */,
 				F286BF5B1D7449B6004EE5AE /* SMImageView.swift in Sources */,
 				F2E4D4E61D3E211600D4E916 /* SMButton.swift in Sources */,
+				F2EFB7ED1DFE897600D4F73A /* SMTestView.swift in Sources */,
 				F286BF511D74360A004EE5AE /* SMRefreshTableView.swift in Sources */,
 				F206CC771D643E470044B76D /* SMBaseViewController.swift in Sources */,
 				F26B405A1D8103E6007967F1 /* SMTableView.swift in Sources */,
+				F283B4C71EA466EB00125B72 /* SMWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +281,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hengxing zeng (TG3QU54E5S)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hengxing zeng (TG3QU54E5S)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -309,6 +333,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -338,8 +363,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hengxing zeng (TG3QU54E5S)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G379KFU825;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -348,7 +374,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.koudai.weidian.smallsao.SMUIKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallsao.SMUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -361,8 +387,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hengxing zeng (TG3QU54E5S)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G379KFU825;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -371,7 +398,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.koudai.weidian.smallsao.SMUIKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallsao.SMUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;

@@ -9,8 +9,6 @@
 import UIKit
 
 open class SMBaseViewController: SMViewController {
-
-    
     open func receiveRoute(data:Dictionary<String, AnyObject>?) {
         
     }

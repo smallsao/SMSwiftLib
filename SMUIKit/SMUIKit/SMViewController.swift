@@ -8,18 +8,17 @@
 
 import UIKit
 import SMExtension
-import SMUIFoundation
 
 open class SMViewController: UIViewController,CAAnimationDelegate {
     
     public var _hhh:Int? {
         willSet {
             
-            print("willSet: \(newValue)  \(self._hhh)")
+            print("willSet: \(String(describing: newValue))  \(String(describing: self._hhh))")
         }
         
         didSet {
-            print("didSet: \(oldValue)")
+            print("didSet: \(String(describing: oldValue))")
 
         }
     }

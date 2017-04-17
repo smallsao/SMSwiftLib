@@ -18,6 +18,11 @@ open class Test2ViewController: SMBaseViewController {
     var label:SMLabel?
     var smView:SMView?
     
+    
+    override open func receiveRoute(data: Dictionary<String, AnyObject>?) {
+        
+    }
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

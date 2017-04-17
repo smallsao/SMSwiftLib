@@ -7,20 +7,15 @@
 //
 
 import UIKit
+import SMUIKit
 
-public class SMRBPageCenter: NSObject {
+public class SMRBPageCenter: SMBaseCenter {
     
-    var pageMapping:Dictionary<String, String> = [:]
+    var pageMapping = SMRBPageMapping()
     
-    static var standard : SMRBPageCenter {
-        struct Static {
-            static let instance : SMRBPageCenter = SMRBPageCenter()
-        }
-        
-        
-//        Static.instance.configMapData()
-        
-        return Static.instance
+    
+    public func loadPageMapping(pageMapping:Dictionary<String,String>) {
+        self.pageMapping.loadPageMapData(pageMapping: pageMapping)
     }
     
     public func open(url: String) {
@@ -46,63 +41,26 @@ public class SMRBPageCenter: NSObject {
     public func open(url:String, params:Dictionary<String, AnyObject>?, animated: Bool, complete:((_ fromViewController:UIViewController, _ toViewController:UIViewController)->Void)?) {
         
         
-        /**
-        url -> url
-        http:// -> http://
+        let rbPage = SMRBPage.parse(aUrl: url, aParams: params)
+        let fromVC = self.currentViewController()
         
-        url -> classname
-        http:// -> cn
-        
-        pageid -> url
-        page:// -> http://
-        
-        pageid -> classname
-        page:// -> cn
-        **/
-
-        // 先解析url， 去除URL中的？以后的数据，或者直接url
-        let urlModel = SMRBUrl.parse(aUrl: url, aParams: params)
-        if let model = urlModel {
-            // 只接受有前缀，并且前缀为 page、http、https的协议
-            // 1. 查找model.url 是否在字典表中有转义
-            var original = ""
-            if "page" == model.scheme {
-                let pageMap = pageMapping[model.host]
-                if let k = pageMap {
-                    original = k
-                }
-                else {
-                    print("page not found: \(url)")
-                    return
-                }
+        if let toVC = self.createViewController(vcType: rbPage.urlType, aUrl: rbPage.url) {
+            if toVC is SMBaseViewController {
+                (toVC as! SMBaseViewController).receiveRoute(data: params)
             }
-            else if "http" == model.scheme || "https" == model.scheme {
-                let pageMap = pageMapping[model.url]
-                if let k = pageMap {
-                    original = k
-                }
-                else {
-                    original = model.url
-                }
+            if toVC is SMBaseViewController {
+                (toVC as! SMBaseViewController).receiveRoute(data: params)
             }
-            else {
-                // 其他不予考虑
-                print("page ignore: \(url)")
-                return
+            self.navigationController().pushViewController(toVC, animated: animated)
+            
+            if complete != nil {
+                complete!(fromVC,toVC)
             }
-            
-            // 对 original 进行处理
-            
-            
         }
         else {
-            // url 为空
-            print("page is empty: \(url)")
-            return
+            self.classNotFound()
         }
         
     }
-    
-    
     
 }

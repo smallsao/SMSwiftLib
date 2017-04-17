@@ -160,11 +160,9 @@ extension Dictionary {
         }
     }
     
-    public mutating func add(fromDictionary: Dictionary) -> Dictionary{
+    public mutating func add(fromDictionary: Dictionary){
         for (key, value) in fromDictionary {
             self[key] = value
         }
-        
-        return self
     }
 }

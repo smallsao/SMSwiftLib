@@ -13,8 +13,6 @@
 		F20CDC9F1D35E56900225D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20CDC9E1D35E56900225D8F /* Assets.xcassets */; };
 		F20CDCA21D35E56900225D8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20CDCA01D35E56900225D8F /* LaunchScreen.storyboard */; };
 		F2143CF61DC6E22900D4135F /* SMTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2143CF51DC6E22900D4135F /* SMTools.framework */; };
-		F2143D2B1DC6E49000D4135F /* SMUIFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2143D2A1DC6E49000D4135F /* SMUIFoundation.framework */; };
-		F2143D2C1DC6E49000D4135F /* SMUIFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2143D2A1DC6E49000D4135F /* SMUIFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F241C8571D8F98F800835E0F /* TestRoutePageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F241C8561D8F98F800835E0F /* TestRoutePageProtocol.swift */; };
 		F286BF631D751B70004EE5AE /* SMUIKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF621D751B70004EE5AE /* SMUIKit.xcassets */; };
 		F286BF651D751B77004EE5AE /* SMExtension.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF641D751B77004EE5AE /* SMExtension.xcassets */; };
@@ -37,7 +35,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F2143D2C1DC6E49000D4135F /* SMUIFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,7 +50,6 @@
 		F20CDCA11D35E56900225D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F20CDCA31D35E56900225D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2143CF51DC6E22900D4135F /* SMTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMTools.framework; path = "../SMTools/build/Debug-iphoneos/SMTools.framework"; sourceTree = "<group>"; };
-		F2143D2A1DC6E49000D4135F /* SMUIFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SMUIFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F241C8561D8F98F800835E0F /* TestRoutePageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRoutePageProtocol.swift; sourceTree = "<group>"; };
 		F286BF621D751B70004EE5AE /* SMUIKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SMUIKit.xcassets; path = ../SMUIKit/SMUIKit.xcassets; sourceTree = "<group>"; };
 		F286BF641D751B77004EE5AE /* SMExtension.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SMExtension.xcassets; path = ../SMExtension/SMExtension.xcassets; sourceTree = "<group>"; };
@@ -74,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2143D2B1DC6E49000D4135F /* SMUIFoundation.framework in Frameworks */,
 				F2143CF61DC6E22900D4135F /* SMTools.framework in Frameworks */,
 				F2CB749C1D87EC1E00F0D94A /* SMRouteBus.framework in Frameworks */,
 				F2E4D4E21D3E1A6100D4E916 /* SMUIKit.framework in Frameworks */,
@@ -88,7 +83,6 @@
 		F20CDC8B1D35E56900225D8F = {
 			isa = PBXGroup;
 			children = (
-				F2143D2A1DC6E49000D4135F /* SMUIFoundation.framework */,
 				F286BF621D751B70004EE5AE /* SMUIKit.xcassets */,
 				F286BF641D751B77004EE5AE /* SMExtension.xcassets */,
 				F2E4D4E71D3E2ABA00D4E916 /* remove_item.png */,
@@ -187,9 +181,10 @@
 				TargetAttributes = {
 					F20CDC931D35E56900225D8F = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = S38HQFK7S4;
+						DevelopmentTeam = G379KFU825;
 						DevelopmentTeamName = "hengxing zeng";
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -356,13 +351,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: hengxing zeng (TG3QU54E5S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = G379KFU825;
 				FRAMEWORK_SEARCH_PATHS = "'${SRCROOT}/../**'";
 				HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";
 				INFOPLIST_FILE = SMMain/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.koudai.weidian.smallsao.SMMain;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallsao.SMMain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";
 			};
@@ -372,13 +370,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = G379KFU825;
 				FRAMEWORK_SEARCH_PATHS = "'${SRCROOT}/../**'";
 				HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";
 				INFOPLIST_FILE = SMMain/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.koudai.weidian.smallsao.SMMain;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallsao.SMMain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";
 			};

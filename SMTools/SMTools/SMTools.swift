@@ -57,3 +57,4 @@ public func SMFont(_ size: CGFloat) -> UIFont {
 public func SMBFont(_ size: CGFloat) -> UIFont {
     return UIFont.boldSystemFont(ofSize: size)
 }
+

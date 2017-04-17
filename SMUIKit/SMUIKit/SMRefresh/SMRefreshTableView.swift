@@ -905,6 +905,9 @@ public class SMRefreshTableView: SMView, SMRefreshTableViewDelegate, SMRefreshTa
             if k.responds(to: #selector(UITableViewDelegate.tableView(_:willBeginEditingRowAt:))) {
                 k.tableView!(tableView, willBeginEditingRowAt: indexPath)
             }
+            if k.responds(to: Selector("UITableViewDelegate.tableView(tableView:willBeginEditingRowAt:)")) {
+                
+            }
         }
     }
     

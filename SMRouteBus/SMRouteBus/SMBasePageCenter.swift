@@ -11,13 +11,9 @@ import SMExtension
 import SMUIKit
 
 
-open class SMBasePageCenter: NSObject {
+public class SMBaseCenter: NSObject {
+    public var navigation:UINavigationController = UINavigationController()
     
-    public func initWithTT() {
-        
-    }
-    
-    public var mapData = Dictionary<String, String>()
     
     open func open(pageId:String, params:Dictionary<String, AnyObject>?, complete:((_ fromViewController:UIViewController, _ toViewController:UIViewController)->Void)?) {
         
@@ -32,47 +28,46 @@ open class SMBasePageCenter: NSObject {
     }
     
     
-    
-    public func navigationController() -> UINavigationController {
-        let appDelegate = UIApplication.shared.delegate
-        return appDelegate?.window?!.rootViewController as! UINavigationController
+    public func currentViewController() -> UIViewController {
+        return self.navigationController().topViewController!
     }
     
     
-    public func createViewController(pageId: String) -> SMBaseViewController? {
-        let cls = convertClass(byPageId: pageId)
-        let vc: SMBaseViewController.Type = cls as! SMBaseViewController.Type
-        let viewController = vc.init()
+    public func navigationController() -> UINavigationController {
+        return self.navigation
+    }
+    
+    
+    public func createViewController(vcType viewControllerType:SMRBPageType, aUrl: String) -> UIViewController? {
+        var viewController:UIViewController?
+        if viewControllerType == .None {
+            
+        }
+        else if viewControllerType == .PAGE {
+            if let cls = convert(className: aUrl) {
+                let vc: UIViewController.Type = cls as! UIViewController.Type
+                viewController = vc.init()
+            }
+            
+        }
+        else if viewControllerType == .HTTP {
+            viewController = SMWebViewController(pUrl: aUrl)
+            
+        }
+        else if viewControllerType == .HTTPS {
+            viewController = SMWebViewController(pUrl: aUrl)
+           
+        }
+        else if viewControllerType == .IMG {
+            
+        }
         
         return viewController
         
     }
     
-    func convert(pageId:String) -> UIViewController? {
-        var vc = findViewController(byPageId: pageId)
-        return vc
-    }
-    
-    func findViewController(byPageId:String) -> UIViewController? {
-        var cls = convertClass(byPageId: byPageId)
-        
-        if let k = cls {
-            return k as! UIViewController
-        }
-        else {
-            return nil
-        }
-    }
-    
-    
-    func convertClass(byPageId:String) -> AnyClass? {
-        let clsName = mapData.stringValue(key: byPageId)
-        var cls = NSClassFromString(clsName)
-        if cls == nil {
-            cls = NSClassFromString(byPageId)
-        }
-        
-        return cls
+    func convert(className:String) -> AnyClass? {
+        return NSClassFromString(className)
     }
     
     public func classNotFound(){
@@ -81,7 +76,7 @@ open class SMBasePageCenter: NSObject {
     }
     
     open func showErrorMsg() {
-        
+        //FIXME: 不存在页面
     }
     
 }

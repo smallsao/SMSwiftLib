@@ -11,25 +11,39 @@ import UIKit
 
 
 public class SMRoute: NSObject {
-    public static let standard = SMRoute()
-    
-    public func open(pageId:String, params:Dictionary<String, AnyObject>?) {
-        self.open(pageId: pageId, params: params, complete: {
-          () in
-        })
+    public let pageCenter:SMRBPageCenter
+    public var pageMappingDataSource:SMRBPageMappingDataSource?
+    public var serviceMappingDataSource:SMRBServiceMappingDataSource?
+    public var messageMappingDataSource:SMRBMessageMappingDataSource?
+    public var navigation:UINavigationController? {
+        willSet {
+            self.pageCenter.navigation = newValue!
+            self.navigation = newValue!
+        }
     }
     
-    public func open(pageId:String, params:Dictionary<String, AnyObject>?, complete:()->Void) {
-        // 根据pageId 找到相关的 ViewController
+    public static var standard : SMRoute {
+        struct Static {
+            static let instance : SMRoute = SMRoute()
+        }
+        return Static.instance
+    }
+    
+    override init() {
+        pageCenter = SMRBPageCenter()
+        super.init()
+    }
+    
+    
+    
+    public func launch() {
+        if let pd = self.pageMappingDataSource {
+            let selector = Selector("loadMapData")
+            if pd.responds(to: selector) {
+                let pageMapping = pd.loadMapData()
+                SMRoute.standard.pageCenter.loadPageMapping(pageMapping: pageMapping)
+            }
+        }
         
     }
-    
-    public func service(serviceId:String, params:Dictionary<String, AnyObject>, complete:()->Void) {
-        
-    }
-    
-    public func message(serviceId:String, source:String, params:Dictionary<String, AnyObject>, complete:()->Void) {
-        
-    }
-    
 }

@@ -11,8 +11,9 @@
 		F241C8591D8F99ED00835E0F /* SMBaseServiceCenter.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2CB74A41D87ED4800F0D94A /* SMBaseServiceCenter.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F241C85A1D8F99ED00835E0F /* SMBaseMessageCenter.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2CB74A61D87ED5900F0D94A /* SMBaseMessageCenter.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F241C85C1D8FC3EB00835E0F /* SMRBPageCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F241C85B1D8FC3EB00835E0F /* SMRBPageCenter.swift */; };
-		F241C85E1D8FC75100835E0F /* SMRBUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F241C85D1D8FC75100835E0F /* SMRBUrl.swift */; };
-		F241C8601D9103F900835E0F /* SMRBMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = F241C85F1D9103F900835E0F /* SMRBMapping.swift */; };
+		F241C85E1D8FC75100835E0F /* SMRBPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F241C85D1D8FC75100835E0F /* SMRBPage.swift */; };
+		F241C8601D9103F900835E0F /* SMRBPageMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = F241C85F1D9103F900835E0F /* SMRBPageMapping.swift */; };
+		F283B4CF1EA49DAC00125B72 /* SMRBMappingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283B4CE1EA49DAC00125B72 /* SMRBMappingDataSource.swift */; };
 		F2983FFB1D88E94500B0C08A /* SMUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2983FFA1D88E94500B0C08A /* SMUIKit.framework */; };
 		F2CB749F1D87EC3000F0D94A /* SMExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CB749E1D87EC3000F0D94A /* SMExtension.framework */; };
 		F2CB74A11D87ECF800F0D94A /* SMRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CB74A01D87ECF800F0D94A /* SMRoute.swift */; };
@@ -24,8 +25,9 @@
 
 /* Begin PBXFileReference section */
 		F241C85B1D8FC3EB00835E0F /* SMRBPageCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRBPageCenter.swift; sourceTree = "<group>"; };
-		F241C85D1D8FC75100835E0F /* SMRBUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRBUrl.swift; sourceTree = "<group>"; };
-		F241C85F1D9103F900835E0F /* SMRBMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRBMapping.swift; sourceTree = "<group>"; };
+		F241C85D1D8FC75100835E0F /* SMRBPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRBPage.swift; sourceTree = "<group>"; };
+		F241C85F1D9103F900835E0F /* SMRBPageMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRBPageMapping.swift; sourceTree = "<group>"; };
+		F283B4CE1EA49DAC00125B72 /* SMRBMappingDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRBMappingDataSource.swift; sourceTree = "<group>"; };
 		F2983FFA1D88E94500B0C08A /* SMUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMUIKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/SMSwiftLib-dmsxtildlclbwseacevhogmfxmvv/Build/Products/Debug-iphonesimulator/SMUIKit.framework"; sourceTree = "<group>"; };
 		F2CB74901D87EC0500F0D94A /* SMRouteBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMRouteBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CB74941D87EC0500F0D94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,8 +77,9 @@
 				F2CB74A41D87ED4800F0D94A /* SMBaseServiceCenter.swift */,
 				F2CB74A61D87ED5900F0D94A /* SMBaseMessageCenter.swift */,
 				F241C85B1D8FC3EB00835E0F /* SMRBPageCenter.swift */,
-				F241C85D1D8FC75100835E0F /* SMRBUrl.swift */,
-				F241C85F1D9103F900835E0F /* SMRBMapping.swift */,
+				F241C85D1D8FC75100835E0F /* SMRBPage.swift */,
+				F241C85F1D9103F900835E0F /* SMRBPageMapping.swift */,
+				F283B4CE1EA49DAC00125B72 /* SMRBMappingDataSource.swift */,
 			);
 			path = SMRouteBus;
 			sourceTree = "<group>";
@@ -136,7 +139,7 @@
 				TargetAttributes = {
 					F2CB748F1D87EC0500F0D94A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = S38HQFK7S4;
+						DevelopmentTeam = G379KFU825;
 						DevelopmentTeamName = "hengxing zeng";
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
@@ -176,12 +179,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2CB74A71D87ED5900F0D94A /* SMBaseMessageCenter.swift in Sources */,
+				F283B4CF1EA49DAC00125B72 /* SMRBMappingDataSource.swift in Sources */,
 				F2CB74A11D87ECF800F0D94A /* SMRoute.swift in Sources */,
-				F241C8601D9103F900835E0F /* SMRBMapping.swift in Sources */,
+				F241C8601D9103F900835E0F /* SMRBPageMapping.swift in Sources */,
 				F2CB74A31D87ED3600F0D94A /* SMBasePageCenter.swift in Sources */,
 				F241C85C1D8FC3EB00835E0F /* SMRBPageCenter.swift in Sources */,
 				F2CB74A51D87ED4800F0D94A /* SMBaseServiceCenter.swift in Sources */,
-				F241C85E1D8FC75100835E0F /* SMRBUrl.swift in Sources */,
+				F241C85E1D8FC75100835E0F /* SMRBPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +292,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: hengxing zeng (TG3QU54E5S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G379KFU825;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -296,8 +302,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.koudai.weidian.smallsao.SMRouteBus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallsao.SMRouteBus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -309,7 +316,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G379KFU825;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -317,8 +326,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.koudai.weidian.smallsao.SMRouteBus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallsao.SMRouteBus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "'${SRCROOT}/../**'";

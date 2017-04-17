@@ -25,7 +25,7 @@ extension UILabel {
             control?.frame = self.bounds
         }
         else {
-            control = UIControl.init(frame: self.bounds)
+            control = UIControl(frame: self.bounds)
             control?.tag = 999
             self.addSubview(control!)
         }

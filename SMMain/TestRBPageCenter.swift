@@ -10,45 +10,11 @@ import UIKit
 import SMUIKit
 import SMRouteBus
 
-class TestRBPageCenter: SMBasePageCenter {
-    
-   
-    
-    func configMapData() {
-        self.mapData = ["A":"Test2ViewController"]
+class TestRBPageCenter: NSObject, SMRBPageMappingDataSource{
+    @objc func loadMapData() -> Dictionary<String, String> {
+        return ["1":"PAGE::SMMain.Test2ViewController??k=a&p=2",
+                "2":"HTTP::http://www.weidian.com?fwr=k??k=a&p=2",
+                "3":"HTTPS::https://www.weidian.com?fwr=k??k=a&p=2",
+                "4":"IMG::https//s.geilicdn.com/official/20174/images/pc/icon/head.cde799ee.png??k=a&p=2"]
     }
-    
-    override func open(pageId:String, params:Dictionary<String, AnyObject>?, complete:((_ fromViewController:UIViewController, _ toViewController:UIViewController)->Void)?) {
-        // 根据pageId 找到相关的 ViewController
-        let vcFrom = self.navigationController().topViewController
-        let vcTo = self.createViewController(pageId: pageId)
-        
-        
-        
-        if let k = vcTo {
-            k.receiveRoute(data: params)
-            if let p = complete {
-                p(vcFrom!,k)
-            }
-        }
-        else {
-            //            不存在页面，什么都不做
-//            not found
-        }
-        
-    }
-
-    
-    override func service(serviceId:String, params:Dictionary<String, AnyObject>, complete:()->Void) {
-        
-    }
-    
-    override func message(serviceId:String, source:String, params:Dictionary<String, AnyObject>, complete:()->Void) {
-        
-    }
-    
-    override func showErrorMsg() {
-        super.showErrorMsg()
-    }
-    
 }

@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SMUIFoundation/SMUIFoundation.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:SMTools/SMTools.xcodeproj">
    </FileRef>
    <FileRef
