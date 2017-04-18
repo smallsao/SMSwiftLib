@@ -14,7 +14,7 @@ import SMRouteBus
 typealias kkBlock = (String) -> Void
 
 
-class ViewController: SMBaseViewController {
+class ViewController: TestBaseViewController {
     
     var a:String?
 

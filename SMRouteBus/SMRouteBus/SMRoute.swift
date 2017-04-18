@@ -9,12 +9,25 @@
 import UIKit
 
 
-
+//Route核心
 public class SMRoute: NSObject {
+    
+    /// 页面中心
     public let pageCenter:SMRBPageCenter
+    
+    
+    /// 页面数据源
     public var pageMappingDataSource:SMRBPageMappingDataSource?
+    
+    
+    /// service数据源
     public var serviceMappingDataSource:SMRBServiceMappingDataSource?
+    
+    /// 消息数据源
     public var messageMappingDataSource:SMRBMessageMappingDataSource?
+    
+    
+    /// 页面管理器
     public var navigation:UINavigationController? {
         willSet {
             self.pageCenter.navigation = newValue!
@@ -22,6 +35,8 @@ public class SMRoute: NSObject {
         }
     }
     
+    
+    /// 单例
     public static var standard : SMRoute {
         struct Static {
             static let instance : SMRoute = SMRoute()
@@ -29,6 +44,8 @@ public class SMRoute: NSObject {
         return Static.instance
     }
     
+    
+    /// 初始化方法
     override init() {
         pageCenter = SMRBPageCenter()
         super.init()
@@ -36,6 +53,7 @@ public class SMRoute: NSObject {
     
     
     
+    /// 启动
     public func launch() {
         if let pd = self.pageMappingDataSource {
             let selector = Selector("loadMapData")

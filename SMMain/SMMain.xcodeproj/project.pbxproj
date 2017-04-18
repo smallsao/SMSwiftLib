@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F202A74B1EA5EC8A008EE2E8 /* TestBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202A74A1EA5EC8A008EE2E8 /* TestBaseViewController.swift */; };
 		F20CDC981D35E56900225D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20CDC971D35E56900225D8F /* AppDelegate.swift */; };
 		F20CDC9A1D35E56900225D8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20CDC991D35E56900225D8F /* ViewController.swift */; };
 		F20CDC9D1D35E56900225D8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20CDC9B1D35E56900225D8F /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		F20CDCA21D35E56900225D8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20CDCA01D35E56900225D8F /* LaunchScreen.storyboard */; };
 		F2143CF61DC6E22900D4135F /* SMTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2143CF51DC6E22900D4135F /* SMTools.framework */; };
 		F241C8571D8F98F800835E0F /* TestRoutePageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F241C8561D8F98F800835E0F /* TestRoutePageProtocol.swift */; };
+		F283B4D51EA5B28F00125B72 /* Test3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283B4D41EA5B28F00125B72 /* Test3ViewController.swift */; };
+		F283B4D71EA5B2A400125B72 /* Test4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283B4D61EA5B2A400125B72 /* Test4ViewController.swift */; };
 		F286BF631D751B70004EE5AE /* SMUIKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF621D751B70004EE5AE /* SMUIKit.xcassets */; };
 		F286BF651D751B77004EE5AE /* SMExtension.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF641D751B77004EE5AE /* SMExtension.xcassets */; };
 		F2A536071D8687AE00994591 /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A536061D8687AE00994591 /* Test2ViewController.swift */; };
@@ -42,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F202A74A1EA5EC8A008EE2E8 /* TestBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBaseViewController.swift; sourceTree = "<group>"; };
 		F20CDC941D35E56900225D8F /* SMMain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMMain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20CDC971D35E56900225D8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F20CDC991D35E56900225D8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		F20CDCA31D35E56900225D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2143CF51DC6E22900D4135F /* SMTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMTools.framework; path = "../SMTools/build/Debug-iphoneos/SMTools.framework"; sourceTree = "<group>"; };
 		F241C8561D8F98F800835E0F /* TestRoutePageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRoutePageProtocol.swift; sourceTree = "<group>"; };
+		F283B4D41EA5B28F00125B72 /* Test3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test3ViewController.swift; sourceTree = "<group>"; };
+		F283B4D61EA5B2A400125B72 /* Test4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test4ViewController.swift; sourceTree = "<group>"; };
 		F286BF621D751B70004EE5AE /* SMUIKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SMUIKit.xcassets; path = ../SMUIKit/SMUIKit.xcassets; sourceTree = "<group>"; };
 		F286BF641D751B77004EE5AE /* SMExtension.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SMExtension.xcassets; path = ../SMExtension/SMExtension.xcassets; sourceTree = "<group>"; };
 		F2A536061D8687AE00994591 /* Test2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
@@ -109,10 +115,13 @@
 				F20CDC991D35E56900225D8F /* ViewController.swift */,
 				F2CB74A81D87EF4300F0D94A /* TestRefreshTableViewController.swift */,
 				F2A536061D8687AE00994591 /* Test2ViewController.swift */,
+				F283B4D41EA5B28F00125B72 /* Test3ViewController.swift */,
+				F283B4D61EA5B2A400125B72 /* Test4ViewController.swift */,
 				F20CDC9B1D35E56900225D8F /* Main.storyboard */,
 				F20CDC9E1D35E56900225D8F /* Assets.xcassets */,
 				F20CDCA01D35E56900225D8F /* LaunchScreen.storyboard */,
 				F20CDCA31D35E56900225D8F /* Info.plist */,
+				F202A74A1EA5EC8A008EE2E8 /* TestBaseViewController.swift */,
 			);
 			path = SMMain;
 			sourceTree = "<group>";
@@ -228,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F20CDC9A1D35E56900225D8F /* ViewController.swift in Sources */,
+				F283B4D71EA5B2A400125B72 /* Test4ViewController.swift in Sources */,
 				F2CB74AF1D87FF0300F0D94A /* TestRBPageCenter.swift in Sources */,
 				F2A536071D8687AE00994591 /* Test2ViewController.swift in Sources */,
 				F2CB74A91D87EF4300F0D94A /* TestRefreshTableViewController.swift in Sources */,
@@ -235,6 +245,8 @@
 				F2E4D5081D3F2A1D00D4E916 /* Reachability.swift in Sources */,
 				F20CDC981D35E56900225D8F /* AppDelegate.swift in Sources */,
 				F241C8571D8F98F800835E0F /* TestRoutePageProtocol.swift in Sources */,
+				F202A74B1EA5EC8A008EE2E8 /* TestBaseViewController.swift in Sources */,
+				F283B4D51EA5B28F00125B72 /* Test3ViewController.swift in Sources */,
 				F2E4D50A1D3F4E7800D4E916 /* TestRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -92,7 +92,9 @@ public class Reachability {
             let status = ReachabilityStatus(reachabilityFlags: flags)
             let name = Notification.Name(ReachabilityStatusChangedNotification)
             
-            NotificationCenter().post(name:name, object: nil, userInfo: ["Status": status.description])
+            NotificationCenter.default.post(name:name, object: nil, userInfo: ["Status": status.description])
+            
+            
             
             }, &context)
         

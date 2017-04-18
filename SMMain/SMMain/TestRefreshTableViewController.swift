@@ -10,7 +10,7 @@ import UIKit
 import SMExtension
 import SMUIKit
 
-class TestRefreshTableViewController: SMBaseViewController, SMRefreshTableViewDelegate, SMRefreshTableViewDataSource {
+class TestRefreshTableViewController: TestBaseViewController, SMRefreshTableViewDelegate, SMRefreshTableViewDataSource {
     
     var tableView:SMRefreshTableView = SMRefreshTableView(frame: CGRect(x: 40, y: 40, width: 300, height: 400), style: .plain)
     

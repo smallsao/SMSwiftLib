@@ -88,7 +88,7 @@ public class SMBaseRequest: NSObject, NSURLConnectionDataDelegate {
             networkException(error)
             
             
-            NotificationCenter().post(name: Notification.Name("NOTIFICATION_NETWWORK_NOT_REACHABLE"), object: nil)
+            NotificationCenter.default.post(name: Notification.Name("NOTIFICATION_NETWWORK_NOT_REACHABLE"), object: nil)
             return
         }
         else if !validateParameter() {

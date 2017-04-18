@@ -8,9 +8,14 @@
 
 import UIKit
 
+
 open class SMBaseViewController: SMViewController {
+    open override func viewDidLoad() {
+        self.view.backgroundColor = .white
+    }
+    
     open func receiveRoute(data:Dictionary<String, AnyObject>?) {
         
     }
-
+    
 }

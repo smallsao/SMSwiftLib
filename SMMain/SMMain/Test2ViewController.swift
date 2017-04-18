@@ -11,7 +11,7 @@ import UIKit
 import SMExtension
 import SMUIKit
 
-open class Test2ViewController: SMBaseViewController {
+open class Test2ViewController: TestBaseViewController {
 
     var button:SMButton?
     

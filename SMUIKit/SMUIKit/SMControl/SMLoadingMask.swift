@@ -28,14 +28,8 @@ public class SMLoadingMask:NSObject, CAAnimationDelegate {
     
     var animationView:UIView?
     
-//    static var standard : SMLoadingMask {
-//        struct Static {
-//            static let instance : SMLoadingMask = SMLoadingMask()
-//        }
-//        return Static.instance
-//    }
-    
     public static func showLoadingMask(pV: UIView?, offsetXY:CGPoint) {
+    
         if let v = pV{
             var tmp = v.viewWithTag(kLoadingMaskBackTag)
             var indicator:UIActivityIndicatorView
@@ -210,84 +204,11 @@ public class SMLoadingMask:NSObject, CAAnimationDelegate {
         group.fillMode = kCAFillModeForwards
         v.layer.add(group, forKey: nil)
         
+        let p:Float = MAXFLOAT
+        
     }
     
-    
-//    public func showFadeInOutTipView(pV:UIView?, tip:String, duration:CGFloat) {
-//        self.showFadeInOutTipView(pV: pV, tip: tip, offsetXY:CGPoint.zero, duration: duration)
-//    }
-    
-    
-//    public func showFadeInOutTipView(pV:UIView?, tip:String, offsetXY:CGPoint, duration:CGFloat) {
-//        if let v = pV {
-//            var modalView = v.viewWithTag(kMaskModalTag)
-//            self.mView = modalView;
-//            
-//            modalView = SMLoadingMask.toastWithActivityIndicator(showIndicator: false, tip: tip)
-//            modalView?.layer.zPosition = CGFloat(NSIntegerMax)
-//            modalView?.tag = kMaskModalTag
-//            v.addSubview(modalView!)
-//            SMLoadingMask.fadeInOutTipView(modalView: modalView!, animationDelegate: self)
-//        }
-//        else {
-//            return ;
-//        }
-//    }
-//    
-//    static func toastWithActivityIndicator(showIndicator:Bool, tip:String) -> UIView{
-//        let ml:CGFloat = 30
-//        let mt:CGFloat = 25
-//        let tw:CGFloat = 240 - 2*ml
-//        let font = SMFont(15)
-//        let size = tip.boundingRect(with: CGSize(width: tw, height:10000), options:  NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil).size
-//        let width:CGFloat = min(size.width, tw) + 2 * ml
-//        
-//        let modalView = UIView(frame: CGRect.zero)
-//        let layer = CALayer()
-//        layer.backgroundColor = UIColor.black.cgColor
-//        layer.opacity = 0.6
-//        layer.cornerRadius = 10
-//        modalView.layer.addSublayer(layer)
-//        
-//        var offsetY = mt
-//        
-//        if showIndicator {
-//            let iw:CGFloat = 22
-//            let indicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
-//            indicator.center = CGPoint(x: width/2, y: mt+iw/2)
-//            modalView.addSubview(indicator)
-//            
-//            offsetY = offsetY + iw + 10
-//        }
-//        
-//        // tip
-//        let label = UILabel(frame: CGRect(x: ml, y: offsetY, width: min(size.width,tw), height: size.height))
-//        label.backgroundColor = UIColor.clear
-//        label.numberOfLines = 0
-//        label.text = tip
-//        label.font = font
-//        label.textColor = UIColor.white
-//        label.textAlignment = .center
-//        modalView.addSubview(label)
-//        
-//        offsetY += CGFloat(ceilf(Float(size.height)))
-//        offsetY += mt
-//        layer.frame = CGRect(x: 0, y: 0, width: width, height: offsetY)
-//        modalView.frame = CGRect(x: 0, y: 0, width: width, height: offsetY)
-//        
-//        return modalView
-//        
-//    }
-    
-    
-
-    
-    
-
-    
-    
 //    CAAnimationDelegate
-
     public func animationDidStart(_ anim: CAAnimation) {
         
     }

@@ -24,27 +24,43 @@ public enum SMRBPageType {
 }
 
 
-public class SMRBPageModel:NSObject{
+
+
+
+/// 页面
+class SMRBPage:NSObject {
+    
     var urlType:SMRBPageType
     var url:String
     var originalUrl:String
     var params:Dictionary<String, AnyObject>
-
+    var viewController:UIViewController
+    var addr:String
+    var isAnchor:Bool
+    
     override init() {
         urlType = .None
         url = ""
         originalUrl = ""
         params = Dictionary<String, AnyObject>()
+        viewController = UIViewController()
+        addr = ""
+        isAnchor = false
+        
+        super.init()
         
     }
-}
-
-class SMRBPage {
     
-    static func parse(aUrl:String, aParams: Dictionary<String, AnyObject>?) -> SMRBPageModel {
-        let model = SMRBPageModel()
+    /// 页面解析
+    ///
+    /// - Parameters:
+    ///   - aUrl: url
+    ///   - aParams: 参数
+    /// - Returns: SMRBPageModel
+    func parse(aUrl:String, aParams: Dictionary<String, AnyObject>?) -> SMRBPage {
+        let model = SMRBPage()
         if SMRBPageMapping.standard.isExist(key: aUrl) {
-            let dd = SMRBPage.dealUrl(aUrl: SMRBPageMapping.standard.parse(key: aUrl))
+            let dd = self.dealUrl(aUrl: SMRBPageMapping.standard.parse(key: aUrl))
             model.urlType = dd.0
             model.url = dd.1
             model.originalUrl = aUrl
@@ -54,7 +70,11 @@ class SMRBPage {
     }
     
     
-    static func dealUrl(aUrl:String) -> (SMRBPageType, String, Dictionary<String, AnyObject>) {
+    /// 处理URL
+    ///
+    /// - Parameter aUrl: url
+    /// - Returns: (页面类型, PageUrl, 参数)
+    private func dealUrl(aUrl:String) -> (SMRBPageType, String, Dictionary<String, AnyObject>) {
         let urlComponents = aUrl.components(separatedBy: "??")
         let url = urlComponents[0]
         
@@ -92,7 +112,12 @@ class SMRBPage {
 
     }
     
-    static func urlParams(query: String) -> Dictionary<String, AnyObject> {
+    
+    /// url中参数解析
+    ///
+    /// - Parameter query: url
+    /// - Returns: 参数
+    func urlParams(query: String) -> Dictionary<String, AnyObject> {
         var dict = Dictionary<String, AnyObject>()
         
         let records = query.components(separatedBy: CharacterSet(charactersIn: "&"))
@@ -103,5 +128,16 @@ class SMRBPage {
             }
         }
         return dict
+    }
+}
+
+extension SMRBPage {
+    public func equal(page:SMRBPage) -> Bool{
+        if (self.urlType == page.urlType && self.url == page.url) {
+            return true
+        }
+        else {
+            return false
+        }
     }
 }

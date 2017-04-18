@@ -11,33 +11,34 @@ import SMExtension
 import SMUIKit
 
 
+/// 基础中心
 public class SMBaseCenter: NSObject {
+    /// 当前Navigation
     public var navigation:UINavigationController = UINavigationController()
     
     
-    open func open(pageId:String, params:Dictionary<String, AnyObject>?, complete:((_ fromViewController:UIViewController, _ toViewController:UIViewController)->Void)?) {
-        
-    }
-    
-    open func service(serviceId:String, params:Dictionary<String, AnyObject>, complete:()->Void) {
-        
-    }
-    
-    open func message(serviceId:String, source:String, params:Dictionary<String, AnyObject>, complete:()->Void) {
-        
-    }
-    
-    
+    /// 当前ViewController
+    ///
+    /// - Returns: ViewController
     public func currentViewController() -> UIViewController {
         return self.navigationController().topViewController!
     }
     
     
+    /// 当前导航
+    ///
+    /// - Returns: NavigationController
     public func navigationController() -> UINavigationController {
         return self.navigation
     }
     
     
+    /// 创建ViewController
+    ///
+    /// - Parameters:
+    ///   - viewControllerType: vcType
+    ///   - aUrl: url
+    /// - Returns: ViewController
     public func createViewController(vcType viewControllerType:SMRBPageType, aUrl: String) -> UIViewController? {
         var viewController:UIViewController?
         if viewControllerType == .None {
@@ -66,15 +67,24 @@ public class SMBaseCenter: NSObject {
         
     }
     
+    
+    /// 字符串转换成Class
+    ///
+    /// - Parameter className: 字符串
+    /// - Returns: Class
     func convert(className:String) -> AnyClass? {
         return NSClassFromString(className)
     }
     
+    
+    /// 没有查找到相关类
     public func classNotFound(){
         UIApplication.shared.endIgnoringInteractionEvents()
         showErrorMsg()
     }
     
+    
+    /// 提示错误
     open func showErrorMsg() {
         //FIXME: 不存在页面
     }

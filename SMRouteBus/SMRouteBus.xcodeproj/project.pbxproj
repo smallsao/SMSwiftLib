@@ -7,19 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F241C8581D8F99ED00835E0F /* SMBasePageCenter.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2CB74A21D87ED3600F0D94A /* SMBasePageCenter.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		F241C8591D8F99ED00835E0F /* SMBaseServiceCenter.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2CB74A41D87ED4800F0D94A /* SMBaseServiceCenter.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		F241C85A1D8F99ED00835E0F /* SMBaseMessageCenter.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2CB74A61D87ED5900F0D94A /* SMBaseMessageCenter.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F241C8581D8F99ED00835E0F /* SMBaseCenter.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2CB74A21D87ED3600F0D94A /* SMBaseCenter.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F241C85C1D8FC3EB00835E0F /* SMRBPageCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F241C85B1D8FC3EB00835E0F /* SMRBPageCenter.swift */; };
 		F241C85E1D8FC75100835E0F /* SMRBPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F241C85D1D8FC75100835E0F /* SMRBPage.swift */; };
 		F241C8601D9103F900835E0F /* SMRBPageMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = F241C85F1D9103F900835E0F /* SMRBPageMapping.swift */; };
 		F283B4CF1EA49DAC00125B72 /* SMRBMappingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283B4CE1EA49DAC00125B72 /* SMRBMappingDataSource.swift */; };
+		F283B4D11EA4D0C100125B72 /* SMRBServiceCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283B4D01EA4D0C100125B72 /* SMRBServiceCenter.swift */; };
+		F283B4D31EA4D0CE00125B72 /* SMRBMessageCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283B4D21EA4D0CE00125B72 /* SMRBMessageCenter.swift */; };
 		F2983FFB1D88E94500B0C08A /* SMUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2983FFA1D88E94500B0C08A /* SMUIKit.framework */; };
 		F2CB749F1D87EC3000F0D94A /* SMExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CB749E1D87EC3000F0D94A /* SMExtension.framework */; };
 		F2CB74A11D87ECF800F0D94A /* SMRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CB74A01D87ECF800F0D94A /* SMRoute.swift */; };
-		F2CB74A31D87ED3600F0D94A /* SMBasePageCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CB74A21D87ED3600F0D94A /* SMBasePageCenter.swift */; };
-		F2CB74A51D87ED4800F0D94A /* SMBaseServiceCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CB74A41D87ED4800F0D94A /* SMBaseServiceCenter.swift */; };
-		F2CB74A71D87ED5900F0D94A /* SMBaseMessageCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CB74A61D87ED5900F0D94A /* SMBaseMessageCenter.swift */; };
+		F2CB74A31D87ED3600F0D94A /* SMBaseCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CB74A21D87ED3600F0D94A /* SMBaseCenter.swift */; };
 		F2CB74AA1D87EFA800F0D94A /* SMRoute.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2CB74A01D87ECF800F0D94A /* SMRoute.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -28,14 +26,14 @@
 		F241C85D1D8FC75100835E0F /* SMRBPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRBPage.swift; sourceTree = "<group>"; };
 		F241C85F1D9103F900835E0F /* SMRBPageMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRBPageMapping.swift; sourceTree = "<group>"; };
 		F283B4CE1EA49DAC00125B72 /* SMRBMappingDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRBMappingDataSource.swift; sourceTree = "<group>"; };
+		F283B4D01EA4D0C100125B72 /* SMRBServiceCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRBServiceCenter.swift; sourceTree = "<group>"; };
+		F283B4D21EA4D0CE00125B72 /* SMRBMessageCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRBMessageCenter.swift; sourceTree = "<group>"; };
 		F2983FFA1D88E94500B0C08A /* SMUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMUIKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/SMSwiftLib-dmsxtildlclbwseacevhogmfxmvv/Build/Products/Debug-iphonesimulator/SMUIKit.framework"; sourceTree = "<group>"; };
 		F2CB74901D87EC0500F0D94A /* SMRouteBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMRouteBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CB74941D87EC0500F0D94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2CB749E1D87EC3000F0D94A /* SMExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMExtension.framework; path = "../../../Library/Developer/Xcode/DerivedData/SMSwiftLib-dmsxtildlclbwseacevhogmfxmvv/Build/Products/Debug-iphonesimulator/SMExtension.framework"; sourceTree = "<group>"; };
 		F2CB74A01D87ECF800F0D94A /* SMRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRoute.swift; sourceTree = "<group>"; };
-		F2CB74A21D87ED3600F0D94A /* SMBasePageCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBasePageCenter.swift; sourceTree = "<group>"; };
-		F2CB74A41D87ED4800F0D94A /* SMBaseServiceCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBaseServiceCenter.swift; sourceTree = "<group>"; };
-		F2CB74A61D87ED5900F0D94A /* SMBaseMessageCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBaseMessageCenter.swift; sourceTree = "<group>"; };
+		F2CB74A21D87ED3600F0D94A /* SMBaseCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBaseCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +71,10 @@
 			children = (
 				F2CB74941D87EC0500F0D94A /* Info.plist */,
 				F2CB74A01D87ECF800F0D94A /* SMRoute.swift */,
-				F2CB74A21D87ED3600F0D94A /* SMBasePageCenter.swift */,
-				F2CB74A41D87ED4800F0D94A /* SMBaseServiceCenter.swift */,
-				F2CB74A61D87ED5900F0D94A /* SMBaseMessageCenter.swift */,
+				F2CB74A21D87ED3600F0D94A /* SMBaseCenter.swift */,
 				F241C85B1D8FC3EB00835E0F /* SMRBPageCenter.swift */,
+				F283B4D01EA4D0C100125B72 /* SMRBServiceCenter.swift */,
+				F283B4D21EA4D0CE00125B72 /* SMRBMessageCenter.swift */,
 				F241C85D1D8FC75100835E0F /* SMRBPage.swift */,
 				F241C85F1D9103F900835E0F /* SMRBPageMapping.swift */,
 				F283B4CE1EA49DAC00125B72 /* SMRBMappingDataSource.swift */,
@@ -101,9 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2CB74AA1D87EFA800F0D94A /* SMRoute.swift in Headers */,
-				F241C8581D8F99ED00835E0F /* SMBasePageCenter.swift in Headers */,
-				F241C8591D8F99ED00835E0F /* SMBaseServiceCenter.swift in Headers */,
-				F241C85A1D8F99ED00835E0F /* SMBaseMessageCenter.swift in Headers */,
+				F241C8581D8F99ED00835E0F /* SMBaseCenter.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,13 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2CB74A71D87ED5900F0D94A /* SMBaseMessageCenter.swift in Sources */,
 				F283B4CF1EA49DAC00125B72 /* SMRBMappingDataSource.swift in Sources */,
 				F2CB74A11D87ECF800F0D94A /* SMRoute.swift in Sources */,
+				F283B4D11EA4D0C100125B72 /* SMRBServiceCenter.swift in Sources */,
 				F241C8601D9103F900835E0F /* SMRBPageMapping.swift in Sources */,
-				F2CB74A31D87ED3600F0D94A /* SMBasePageCenter.swift in Sources */,
+				F283B4D31EA4D0CE00125B72 /* SMRBMessageCenter.swift in Sources */,
+				F2CB74A31D87ED3600F0D94A /* SMBaseCenter.swift in Sources */,
 				F241C85C1D8FC3EB00835E0F /* SMRBPageCenter.swift in Sources */,
-				F2CB74A51D87ED4800F0D94A /* SMBaseServiceCenter.swift in Sources */,
 				F241C85E1D8FC75100835E0F /* SMRBPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

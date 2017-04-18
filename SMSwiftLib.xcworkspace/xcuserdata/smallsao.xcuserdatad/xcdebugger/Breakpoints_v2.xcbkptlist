@@ -27,13 +27,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SMUIKit/SMUIKit/SMBaseViewController.swift"
-            timestampString = "514116691.035647"
+            filePath = "SMRouteBus/SMRouteBus/SMRBPageCenter.swift"
+            timestampString = "514191489.5078"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "receiveRoute(data:)"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "close(byCount:animated:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMRouteBus/SMRouteBus/SMRBPageCenter.swift"
+            timestampString = "514191512.525574"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "close(byCount:animated:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
