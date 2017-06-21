@@ -184,8 +184,8 @@ extension String {
      - returns: 真实范围
      */
     public func smSize(font:UIFont, size:CGSize) -> CGSize{
-        var attributes = [NSFontAttributeName: font]
-        var option = NSStringDrawingOptions(rawValue: 1)
+        let attributes = [NSFontAttributeName: font]
+        let option = NSStringDrawingOptions(rawValue: 1)
         let rect:CGRect = self.boundingRect(with: size, options:option, attributes: attributes, context: nil)
         return CGSize(width: rect.width, height: rect.height)
     }
@@ -200,9 +200,7 @@ extension String {
      - returns: Array
      */
     public func chineseWords() -> Array<String> {
-        var words = Array<String>()
-        let str = self.cString(using: .utf8)!
-        
+        var words = Array<String>()        
         for (_, value) in self.characters.enumerated() {
             
             let s = String(value)

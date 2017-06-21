@@ -33,8 +33,11 @@ open class TestBaseViewController: SMBaseViewController {
     }
     
     open func goBack() {
+        
+        self.navigationController?.popViewController(animated: true)
+        
 //        SMRoute.standard.pageCenter.close()
-        SMRoute.standard.pageCenter.close(byCount: 2)
+//        SMRoute.standard.pageCenter.close(byCount: 2)
     }
 
     /*
@@ -46,5 +49,9 @@ open class TestBaseViewController: SMBaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    deinit {
+        print(11)
+    }
 
 }

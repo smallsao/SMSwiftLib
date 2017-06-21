@@ -119,7 +119,7 @@ class SMRefreshTableHeaderView:UIControl {
         }
         else {
             time = ""
-            lbTime.text = "最近更新：\(time)"
+            lbTime.text = "最近更新：\(time!)"
         }
         
         switch style {
@@ -155,7 +155,7 @@ class SMRefreshTableHeaderView:UIControl {
             ivImage.transform = CGAffineTransform.identity
         }
         else {
-            ivImage.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
+            ivImage.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         }
         
         if animated {

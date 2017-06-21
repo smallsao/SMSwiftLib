@@ -126,8 +126,10 @@ public class SMRBPageCenter: SMBaseCenter {
     ///
     /// - Parameter animate: 动画
     public func close(animate:Bool) {
-        self.navigationController().popViewController(animated: animate)
-        self.pages.removeLast()
+        if self.pages.count > 0 {
+            self.pages.removeLast()
+            self.navigationController().popViewController(animated: animate)
+        }
     }
     
     

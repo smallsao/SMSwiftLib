@@ -145,8 +145,8 @@ public class SMLoadingMask:NSObject, CAAnimationDelegate {
                 
                 let width = min(size.width, tw) + 2*ml;
                 
-                var vMask = UIView()
-                var lbMsg = UILabel()
+                let vMask = UIView()
+                let lbMsg = UILabel()
                 
                 lbMsg.frame = CGRect(x: ml, y: mt, width: min(size.width, tw), height: size.height)
                 vMask.frame = CGRect(x: (v.width - width)/2, y: (v.height - size.height - 50)*0.4, width: width, height: size.height + 50)
@@ -203,9 +203,6 @@ public class SMLoadingMask:NSObject, CAAnimationDelegate {
         group.isRemovedOnCompletion = false
         group.fillMode = kCAFillModeForwards
         v.layer.add(group, forKey: nil)
-        
-        let p:Float = MAXFLOAT
-        
     }
     
 //    CAAnimationDelegate

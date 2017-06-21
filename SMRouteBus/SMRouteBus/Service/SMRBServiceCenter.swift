@@ -9,10 +9,8 @@
 import UIKit
 
 class SMRBServiceCenter: NSObject {
-
-    
-    
-    func service(serviceId:String, params:Dictionary<String, AnyObject>, complete:()->Void) {
+    func service(aUrl:String, aParams:Dictionary<String, AnyObject>, complete:()->Void) {
+        let rbService = SMRBServiceTools.parse(aUrl: aUrl, aParam: aParams)
         
     }
 }

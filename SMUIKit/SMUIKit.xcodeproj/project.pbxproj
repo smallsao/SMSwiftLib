@@ -33,6 +33,8 @@
 		F286BF511D74360A004EE5AE /* SMRefreshTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F286BF501D74360A004EE5AE /* SMRefreshTableView.swift */; };
 		F286BF5B1D7449B6004EE5AE /* SMImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F286BF5A1D7449B6004EE5AE /* SMImageView.swift */; };
 		F286BF611D751B5E004EE5AE /* SMUIKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF601D751B5E004EE5AE /* SMUIKit.xcassets */; };
+		F2BEDF871EF92F1F00248C21 /* SMAutoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BEDF861EF92F1F00248C21 /* SMAutoScrollView.swift */; };
+		F2BEDF881EFA097E00248C21 /* SMAutoScrollView.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2BEDF861EF92F1F00248C21 /* SMAutoScrollView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2DFA48B1D40C21C009D4419 /* SMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFA48A1D40C21C009D4419 /* SMTextField.swift */; };
 		F2DFA48D1D40C2A9009D4419 /* SMSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFA48C1D40C2A9009D4419 /* SMSwitch.swift */; };
 		F2DFA48F1D40C309009D4419 /* SMSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFA48E1D40C309009D4419 /* SMSlider.swift */; };
@@ -55,6 +57,7 @@
 		F286BF501D74360A004EE5AE /* SMRefreshTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRefreshTableView.swift; sourceTree = "<group>"; };
 		F286BF5A1D7449B6004EE5AE /* SMImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMImageView.swift; sourceTree = "<group>"; };
 		F286BF601D751B5E004EE5AE /* SMUIKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SMUIKit.xcassets; sourceTree = "<group>"; };
+		F2BEDF861EF92F1F00248C21 /* SMAutoScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMAutoScrollView.swift; sourceTree = "<group>"; };
 		F2DFA48A1D40C21C009D4419 /* SMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTextField.swift; sourceTree = "<group>"; };
 		F2DFA48C1D40C2A9009D4419 /* SMSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSwitch.swift; sourceTree = "<group>"; };
 		F2DFA48E1D40C309009D4419 /* SMSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSlider.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				F26C0D7D1E9C7BFC00761EF0 /* SMLoadingMask.swift */,
+				F2BEDF861EF92F1F00248C21 /* SMAutoScrollView.swift */,
 			);
 			path = SMControl;
 			sourceTree = "<group>";
@@ -166,6 +170,7 @@
 				F283B4CB1EA471BF00125B72 /* SMTestView.swift in Headers */,
 				F283B4CA1EA471BA00125B72 /* SMRefreshTableView.swift in Headers */,
 				F283B4C91EA471B700125B72 /* SMLoadingMask.swift in Headers */,
+				F2BEDF881EFA097E00248C21 /* SMAutoScrollView.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +208,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = G379KFU825;
 						DevelopmentTeamName = "hengxing zeng";
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -245,6 +250,7 @@
 				F2E4D4D91D3E144F00D4E916 /* SMLabel.swift in Sources */,
 				F2DFA48B1D40C21C009D4419 /* SMTextField.swift in Sources */,
 				F2DFA48D1D40C2A9009D4419 /* SMSwitch.swift in Sources */,
+				F2BEDF871EF92F1F00248C21 /* SMAutoScrollView.swift in Sources */,
 				F2DFA48F1D40C309009D4419 /* SMSlider.swift in Sources */,
 				F273288B1D3F719B00647F9E /* SMView.swift in Sources */,
 				F26C0D7E1E9C7BFC00761EF0 /* SMLoadingMask.swift in Sources */,

@@ -11,10 +11,12 @@ import UIKit
 import SMExtension
 import SMUIKit
 import SMRouteBus
+import SMTools
 typealias kkBlock = (String) -> Void
 
 
-class ViewController: TestBaseViewController {
+class ViewController: TestBaseViewController{
+
     
     var a:String?
 
@@ -111,6 +113,9 @@ class ViewController: TestBaseViewController {
     }
     func tappedLabel1() {
         SMRoute.standard.pageCenter.open(url: "2")
+        
+        
+        
     }
     
     func tappedLabel2() {
@@ -118,7 +123,9 @@ class ViewController: TestBaseViewController {
     }
     
     func tappedLabel() {
-        SMRoute.standard.pageCenter.open(url:"1")
+        self.navigationController?.pushViewController(Test3ViewController(), animated: true)
+
+//        SMRoute.standard.pageCenter.open(url:"1")
 
         
         let service_command = String(format: "service_xx:completion:")
@@ -156,7 +163,6 @@ class ViewController: TestBaseViewController {
         print(data)
         (completion["ss"] as! kkBlock)("ssdhsafdhasdjks")
     }
-
 }
 
 
@@ -187,6 +193,7 @@ class C: B {
         
     }
 }
+
 
 
 

@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F202A74B1EA5EC8A008EE2E8 /* TestBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202A74A1EA5EC8A008EE2E8 /* TestBaseViewController.swift */; };
+		F202A7511EA5F5FE008EE2E8 /* TestRBPageCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202A74F1EA5F5FE008EE2E8 /* TestRBPageCenter.swift */; };
+		F202A7521EA5F5FE008EE2E8 /* TestRBServiceCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202A7501EA5F5FE008EE2E8 /* TestRBServiceCenter.swift */; };
+		F202A7591EA5F61F008EE2E8 /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202A7551EA5F61F008EE2E8 /* Test2ViewController.swift */; };
+		F202A75A1EA5F61F008EE2E8 /* Test3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202A7561EA5F61F008EE2E8 /* Test3ViewController.swift */; };
+		F202A75B1EA5F61F008EE2E8 /* Test4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202A7571EA5F61F008EE2E8 /* Test4ViewController.swift */; };
 		F20CDC981D35E56900225D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20CDC971D35E56900225D8F /* AppDelegate.swift */; };
 		F20CDC9A1D35E56900225D8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20CDC991D35E56900225D8F /* ViewController.swift */; };
 		F20CDC9D1D35E56900225D8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20CDC9B1D35E56900225D8F /* Main.storyboard */; };
 		F20CDC9F1D35E56900225D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20CDC9E1D35E56900225D8F /* Assets.xcassets */; };
 		F20CDCA21D35E56900225D8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20CDCA01D35E56900225D8F /* LaunchScreen.storyboard */; };
 		F2143CF61DC6E22900D4135F /* SMTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2143CF51DC6E22900D4135F /* SMTools.framework */; };
-		F241C8571D8F98F800835E0F /* TestRoutePageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F241C8561D8F98F800835E0F /* TestRoutePageProtocol.swift */; };
-		F283B4D51EA5B28F00125B72 /* Test3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283B4D41EA5B28F00125B72 /* Test3ViewController.swift */; };
-		F283B4D71EA5B2A400125B72 /* Test4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283B4D61EA5B2A400125B72 /* Test4ViewController.swift */; };
 		F286BF631D751B70004EE5AE /* SMUIKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF621D751B70004EE5AE /* SMUIKit.xcassets */; };
 		F286BF651D751B77004EE5AE /* SMExtension.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF641D751B77004EE5AE /* SMExtension.xcassets */; };
-		F2A536071D8687AE00994591 /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A536061D8687AE00994591 /* Test2ViewController.swift */; };
 		F2B0761B1D35FDE900928FB9 /* SMExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B0761A1D35FDE900928FB9 /* SMExtension.framework */; };
 		F2CB749C1D87EC1E00F0D94A /* SMRouteBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CB749B1D87EC1E00F0D94A /* SMRouteBus.framework */; };
 		F2CB74A91D87EF4300F0D94A /* TestRefreshTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CB74A81D87EF4300F0D94A /* TestRefreshTableViewController.swift */; };
-		F2CB74AF1D87FF0300F0D94A /* TestRBPageCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CB74AE1D87FF0300F0D94A /* TestRBPageCenter.swift */; };
 		F2E4D4E21D3E1A6100D4E916 /* SMUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E4D4E11D3E1A6100D4E916 /* SMUIKit.framework */; };
 		F2E4D4E81D3E2ABA00D4E916 /* remove_item.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E4D4E71D3E2ABA00D4E916 /* remove_item.png */; };
 		F2E4D5041D3F25EC00D4E916 /* SMBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D5031D3F25EC00D4E916 /* SMBaseRequest.swift */; };
@@ -46,6 +46,11 @@
 
 /* Begin PBXFileReference section */
 		F202A74A1EA5EC8A008EE2E8 /* TestBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBaseViewController.swift; sourceTree = "<group>"; };
+		F202A74F1EA5F5FE008EE2E8 /* TestRBPageCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRBPageCenter.swift; sourceTree = "<group>"; };
+		F202A7501EA5F5FE008EE2E8 /* TestRBServiceCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRBServiceCenter.swift; sourceTree = "<group>"; };
+		F202A7551EA5F61F008EE2E8 /* Test2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
+		F202A7561EA5F61F008EE2E8 /* Test3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test3ViewController.swift; sourceTree = "<group>"; };
+		F202A7571EA5F61F008EE2E8 /* Test4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test4ViewController.swift; sourceTree = "<group>"; };
 		F20CDC941D35E56900225D8F /* SMMain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMMain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20CDC971D35E56900225D8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F20CDC991D35E56900225D8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,16 +59,11 @@
 		F20CDCA11D35E56900225D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F20CDCA31D35E56900225D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2143CF51DC6E22900D4135F /* SMTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMTools.framework; path = "../SMTools/build/Debug-iphoneos/SMTools.framework"; sourceTree = "<group>"; };
-		F241C8561D8F98F800835E0F /* TestRoutePageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRoutePageProtocol.swift; sourceTree = "<group>"; };
-		F283B4D41EA5B28F00125B72 /* Test3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test3ViewController.swift; sourceTree = "<group>"; };
-		F283B4D61EA5B2A400125B72 /* Test4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test4ViewController.swift; sourceTree = "<group>"; };
 		F286BF621D751B70004EE5AE /* SMUIKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SMUIKit.xcassets; path = ../SMUIKit/SMUIKit.xcassets; sourceTree = "<group>"; };
 		F286BF641D751B77004EE5AE /* SMExtension.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SMExtension.xcassets; path = ../SMExtension/SMExtension.xcassets; sourceTree = "<group>"; };
-		F2A536061D8687AE00994591 /* Test2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
 		F2B0761A1D35FDE900928FB9 /* SMExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMExtension.framework; path = "../SMExtension/build/Debug-iphoneos/SMExtension.framework"; sourceTree = "<group>"; };
 		F2CB749B1D87EC1E00F0D94A /* SMRouteBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMRouteBus.framework; path = "../SMRouteBus/build/Debug-iphoneos/SMRouteBus.framework"; sourceTree = "<group>"; };
 		F2CB74A81D87EF4300F0D94A /* TestRefreshTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRefreshTableViewController.swift; sourceTree = "<group>"; };
-		F2CB74AE1D87FF0300F0D94A /* TestRBPageCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRBPageCenter.swift; sourceTree = "<group>"; };
 		F2E4D4E11D3E1A6100D4E916 /* SMUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMUIKit.framework; path = "../SMUIKit/build/Debug-iphoneos/SMUIKit.framework"; sourceTree = "<group>"; };
 		F2E4D4E71D3E2ABA00D4E916 /* remove_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remove_item.png; sourceTree = "<group>"; };
 		F2E4D5031D3F25EC00D4E916 /* SMBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBaseRequest.swift; sourceTree = "<group>"; };
@@ -86,6 +86,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F202A74E1EA5F5FE008EE2E8 /* Center */ = {
+			isa = PBXGroup;
+			children = (
+				F202A74F1EA5F5FE008EE2E8 /* TestRBPageCenter.swift */,
+				F202A7501EA5F5FE008EE2E8 /* TestRBServiceCenter.swift */,
+			);
+			path = Center;
+			sourceTree = "<group>";
+		};
+		F202A7531EA5F61F008EE2E8 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		F202A7541EA5F61F008EE2E8 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				F202A7551EA5F61F008EE2E8 /* Test2ViewController.swift */,
+				F202A7561EA5F61F008EE2E8 /* Test3ViewController.swift */,
+				F202A7571EA5F61F008EE2E8 /* Test4ViewController.swift */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		F202A7581EA5F61F008EE2E8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		F20CDC8B1D35E56900225D8F = {
 			isa = PBXGroup;
 			children = (
@@ -109,31 +142,21 @@
 		F20CDC961D35E56900225D8F /* SMMain */ = {
 			isa = PBXGroup;
 			children = (
-				F2CB74AD1D87FEDF00F0D94A /* Route */,
-				F2E4D5021D3F25C700D4E916 /* Request */,
 				F20CDC971D35E56900225D8F /* AppDelegate.swift */,
 				F20CDC991D35E56900225D8F /* ViewController.swift */,
 				F2CB74A81D87EF4300F0D94A /* TestRefreshTableViewController.swift */,
-				F2A536061D8687AE00994591 /* Test2ViewController.swift */,
-				F283B4D41EA5B28F00125B72 /* Test3ViewController.swift */,
-				F283B4D61EA5B2A400125B72 /* Test4ViewController.swift */,
+				F202A74A1EA5EC8A008EE2E8 /* TestBaseViewController.swift */,
+				F2E4D5021D3F25C700D4E916 /* Request */,
+				F202A74E1EA5F5FE008EE2E8 /* Center */,
+				F202A7531EA5F61F008EE2E8 /* Message */,
+				F202A7541EA5F61F008EE2E8 /* Page */,
+				F202A7581EA5F61F008EE2E8 /* Service */,
 				F20CDC9B1D35E56900225D8F /* Main.storyboard */,
 				F20CDC9E1D35E56900225D8F /* Assets.xcassets */,
 				F20CDCA01D35E56900225D8F /* LaunchScreen.storyboard */,
 				F20CDCA31D35E56900225D8F /* Info.plist */,
-				F202A74A1EA5EC8A008EE2E8 /* TestBaseViewController.swift */,
 			);
 			path = SMMain;
-			sourceTree = "<group>";
-		};
-		F2CB74AD1D87FEDF00F0D94A /* Route */ = {
-			isa = PBXGroup;
-			children = (
-				F2CB74AE1D87FF0300F0D94A /* TestRBPageCenter.swift */,
-				F241C8561D8F98F800835E0F /* TestRoutePageProtocol.swift */,
-			);
-			name = Route;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		F2E4D4DA1D3E197900D4E916 /* Frameworks */ = {
@@ -237,17 +260,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F20CDC9A1D35E56900225D8F /* ViewController.swift in Sources */,
-				F283B4D71EA5B2A400125B72 /* Test4ViewController.swift in Sources */,
-				F2CB74AF1D87FF0300F0D94A /* TestRBPageCenter.swift in Sources */,
-				F2A536071D8687AE00994591 /* Test2ViewController.swift in Sources */,
 				F2CB74A91D87EF4300F0D94A /* TestRefreshTableViewController.swift in Sources */,
+				F202A7511EA5F5FE008EE2E8 /* TestRBPageCenter.swift in Sources */,
 				F2E4D5041D3F25EC00D4E916 /* SMBaseRequest.swift in Sources */,
+				F202A7521EA5F5FE008EE2E8 /* TestRBServiceCenter.swift in Sources */,
+				F202A7591EA5F61F008EE2E8 /* Test2ViewController.swift in Sources */,
 				F2E4D5081D3F2A1D00D4E916 /* Reachability.swift in Sources */,
+				F202A75A1EA5F61F008EE2E8 /* Test3ViewController.swift in Sources */,
 				F20CDC981D35E56900225D8F /* AppDelegate.swift in Sources */,
-				F241C8571D8F98F800835E0F /* TestRoutePageProtocol.swift in Sources */,
 				F202A74B1EA5EC8A008EE2E8 /* TestBaseViewController.swift in Sources */,
-				F283B4D51EA5B28F00125B72 /* Test3ViewController.swift in Sources */,
 				F2E4D50A1D3F4E7800D4E916 /* TestRequest.swift in Sources */,
+				F202A75B1EA5F61F008EE2E8 /* Test4ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

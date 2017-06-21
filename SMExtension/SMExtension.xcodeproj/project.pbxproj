@@ -22,6 +22,8 @@
 		F2A2E13A1DF7DF1800CD7DB6 /* SMEInt.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2A2E1381DF7DE3700CD7DB6 /* SMEInt.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2B076151D35FD1600928FB9 /* SMExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B076141D35FD1600928FB9 /* SMExtension.swift */; };
 		F2B0761C1D35FE1E00928FB9 /* SMExtension.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2B076141D35FD1600928FB9 /* SMExtension.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2BEDF8A1EFA0AB900248C21 /* SMEUIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BEDF891EFA0AB900248C21 /* SMEUIScreen.swift */; };
+		F2BEDF8B1EFA0B0B00248C21 /* SMEUIScreen.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2BEDF891EFA0AB900248C21 /* SMEUIScreen.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2E4D49D1D3E127700D4E916 /* SMUIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D49C1D3E127700D4E916 /* SMUIKitExtension.swift */; };
 		F2E4D49E1D3E128200D4E916 /* SMUIKitExtension.swift in Headers */ = {isa = PBXBuildFile; fileRef = F2E4D49C1D3E127700D4E916 /* SMUIKitExtension.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -37,6 +39,7 @@
 		F2B076091D35FD0A00928FB9 /* SMExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B0760E1D35FD0A00928FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B076141D35FD1600928FB9 /* SMExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMExtension.swift; sourceTree = "<group>"; };
+		F2BEDF891EFA0AB900248C21 /* SMEUIScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMEUIScreen.swift; sourceTree = "<group>"; };
 		F2E4D49C1D3E127700D4E916 /* SMUIKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUIKitExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +83,7 @@
 				F2143CD31DC6DE0B00D4135F /* SMEColor.swift */,
 				F2143CD51DC6DE2900D4135F /* SMEData.swift */,
 				F2A2E1381DF7DE3700CD7DB6 /* SMEInt.swift */,
+				F2BEDF891EFA0AB900248C21 /* SMEUIScreen.swift */,
 			);
 			path = SMExtension;
 			sourceTree = "<group>";
@@ -99,6 +103,7 @@
 				F2143CDA1DC6DE6E00D4135F /* SMEColor.swift in Headers */,
 				F2143CDB1DC6DE6E00D4135F /* SMEData.swift in Headers */,
 				F2A2E13A1DF7DF1800CD7DB6 /* SMEInt.swift in Headers */,
+				F2BEDF8B1EFA0B0B00248C21 /* SMEUIScreen.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +184,7 @@
 				F2E4D49D1D3E127700D4E916 /* SMUIKitExtension.swift in Sources */,
 				F2143CD21DC6DDA000D4135F /* SMEDictionary.swift in Sources */,
 				F2143CD61DC6DE2900D4135F /* SMEData.swift in Sources */,
+				F2BEDF8A1EFA0AB900248C21 /* SMEUIScreen.swift in Sources */,
 				F2B076151D35FD1600928FB9 /* SMExtension.swift in Sources */,
 				F2A2E1391DF7DE3700CD7DB6 /* SMEInt.swift in Sources */,
 			);

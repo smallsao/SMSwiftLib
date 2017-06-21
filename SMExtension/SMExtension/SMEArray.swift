@@ -15,7 +15,7 @@ extension Array {
     public func stringValue(index:Int) -> String {
         if index < self.count {
             let value = self[index]
-            return obj2Str(obj: value as! AnyObject)
+            return obj2Str(obj: value as AnyObject)
         }
         else {
             return ""

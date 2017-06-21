@@ -22,7 +22,7 @@ public class SMUIKitUtils: NSObject {
         let naviCtrl = keyWindow?.rootViewController
         
         if naviCtrl is UINavigationController {
-            return naviCtrl as! UINavigationController
+            return naviCtrl as? UINavigationController
         }
         else {
             return nil

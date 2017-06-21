@@ -31,7 +31,7 @@ class SMRBPageMapping: NSObject {
     
     /// 装载页面映射
     ///
-    /// - Parameter pageMapping: <#pageMapping description#>
+    /// - Parameter pageMapping: 映射信息
     func loadPageMapData(pageMapping:Dictionary<String, String>){
         SMRBPageMapping.standard.pageMapping = pageMapping
     }

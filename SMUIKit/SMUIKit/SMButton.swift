@@ -41,10 +41,8 @@ extension UIButton {
      - parameter space: 图片与按钮间隔
      */
     public func centerHImageAndTitle(space:CGFloat) {
-        let padding = max(space, 0.0)
         
         let imageSize = (self.imageView?.frame.size)!
-        var titleSize = (self.titleLabel?.frame.size)!
 
         self.imageEdgeInsets = UIEdgeInsetsMake(0.0, -imageSize.width - space / 2, 0, 0)
         self.imageView?.backgroundColor = UIColor.yellow

@@ -141,7 +141,7 @@ extension UIView {
      - parameter space: 间隔
      */
     public func addDashed(color: UIColor, width: CGFloat, space:Float) {
-        var border = CAShapeLayer()
+        let border = CAShapeLayer()
         border.strokeColor = color.cgColor
         border.fillColor = nil
         border.path = UIBezierPath(rect: self.bounds).cgPath
@@ -243,9 +243,6 @@ extension UIView {
             redDot?.isHidden = true
         }
     }
-    
-
-
 }
 
 
@@ -254,6 +251,9 @@ extension UIView {
 
 
 open class SMView: UIView {
+    init() {
+        super.init(frame:.zero)
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)

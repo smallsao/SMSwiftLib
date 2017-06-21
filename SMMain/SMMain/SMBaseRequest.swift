@@ -124,9 +124,6 @@ public class SMBaseRequest: NSObject, NSURLConnectionDataDelegate {
             data, response, err in
             var error = err
             if error == nil {
-                let rString = String(data: data!, encoding: .utf8)
-                print(rString)
-                
                 let dict = Dictionary<String, AnyObject>()
                 error = self.checkResponseCode(respData: dict as Dictionary<String, AnyObject>)
                 if let e = error {
