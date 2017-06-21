@@ -70,64 +70,32 @@ class Test3ViewController: TestBaseViewController, SMAutoScrollDelegate, SMAutoS
         autoScrollView.reloadData()
     }
     
-    func numberOfComponents(in autoScrollView: SMAutoScrollView) -> Int {
-        return 1;
-    }
-    
-    func autoScrollView(_ autoScrollView: SMAutoScrollView, numberOfRowsInComponent component: Int) -> Int {
+    func numberOfRows(in autoScrollView: SMAutoScrollView) -> Int {
         return autoScrollData.count * 1000
     }
     
-    func autoScrollView(_ autoScrollView: SMAutoScrollView, widthForComponent component: Int) -> CGFloat {
-        return UIScreen().width()
-    }
-    
-    func autoScrollView(_ autoScrollView: SMAutoScrollView, rowHeightForComponent component: Int) -> CGFloat {
+    func autoScrollView(_ autoScrollView: SMAutoScrollView, heightForRowAt index: Int) -> CGFloat {
         return 78
     }
     
-    
-    
-    //    func autoScrollView(_ autoScrollView: SMAutoScrollView, titleForRow row: Int, forComponent component: Int) -> String? {
-    //        return "\(component)"
-    //    }
-    
-    func autoScrollView(_ autoScrollView: SMAutoScrollView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        let view = SMView()
-        view.frame = CGRect(x: 0, y: 0, width: UIScreen().width(), height: 78)
+    func autoScrollView(_ autoScrollView: SMAutoScrollView, cellForRowAt index: Int) -> SMAutoScrollViewCell {
+        let cellID = "SMAutoScrollViewCell"
+        var cell = autoScrollView.dequeueReusableCell(withIdentifier: cellID)
+        if cell == nil {
+            cell = TestAutoScrollViewCell(reuseIdentifier: cellID)
+        }
+        let dict = autoScrollData[index%autoScrollData.count]
+
+        cell?.updateData(data: dict as AnyObject)
         
-        let ivIcon = UIImageView()
-        view.addSubview(ivIcon)
-        ivIcon.frame = CGRect(x: 15, y: 15, width: 48, height: 48)
-        ivIcon.layer.cornerRadius = 24
-        ivIcon.clipsToBounds = true
-        
-        let lbTitle = SMLabel()
-        lbTitle.frame = CGRect(x: 78, y: 15, width: UIScreen().width() - 78*2, height: 20)
-        lbTitle.textAlignment = .center
-        lbTitle.font = SMFont(16)
-        view.addSubview(lbTitle)
-        
-        
-        let lbDesc = SMLabel()
-        lbDesc.frame = CGRect(x: 78, y: 43, width: UIScreen().width() - 78*2, height: 20)
-        lbDesc.textAlignment = .center
-        lbDesc.textColor = UIColor.gray
-        lbDesc.font = SMFont(12)
-        view.addSubview(lbDesc)
-        
-        
-        
-        let dict = autoScrollData[component%autoScrollData.count]
-        
-        ivIcon.image = UIImage(named: dict["image"]!)
-        lbTitle.text = dict["title"]
-        lbDesc.text = dict["desc"]
-        
-        return view
+        return cell!
+
     }
-
-
+    
+    func autoScrollView(_ autoScrollView: SMAutoScrollView, didSelectRowAt index: Int) {
+        
+    }
+    
     deinit {
        print("sss")
     }

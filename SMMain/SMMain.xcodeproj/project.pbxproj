@@ -22,6 +22,7 @@
 		F286BF631D751B70004EE5AE /* SMUIKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF621D751B70004EE5AE /* SMUIKit.xcassets */; };
 		F286BF651D751B77004EE5AE /* SMExtension.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F286BF641D751B77004EE5AE /* SMExtension.xcassets */; };
 		F2B0761B1D35FDE900928FB9 /* SMExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B0761A1D35FDE900928FB9 /* SMExtension.framework */; };
+		F2BEDF8D1EFA6EFA00248C21 /* TestAutoScrollViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BEDF8C1EFA6EFA00248C21 /* TestAutoScrollViewCell.swift */; };
 		F2CB749C1D87EC1E00F0D94A /* SMRouteBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CB749B1D87EC1E00F0D94A /* SMRouteBus.framework */; };
 		F2CB74A91D87EF4300F0D94A /* TestRefreshTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CB74A81D87EF4300F0D94A /* TestRefreshTableViewController.swift */; };
 		F2E4D4E21D3E1A6100D4E916 /* SMUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E4D4E11D3E1A6100D4E916 /* SMUIKit.framework */; };
@@ -62,6 +63,7 @@
 		F286BF621D751B70004EE5AE /* SMUIKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SMUIKit.xcassets; path = ../SMUIKit/SMUIKit.xcassets; sourceTree = "<group>"; };
 		F286BF641D751B77004EE5AE /* SMExtension.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SMExtension.xcassets; path = ../SMExtension/SMExtension.xcassets; sourceTree = "<group>"; };
 		F2B0761A1D35FDE900928FB9 /* SMExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMExtension.framework; path = "../SMExtension/build/Debug-iphoneos/SMExtension.framework"; sourceTree = "<group>"; };
+		F2BEDF8C1EFA6EFA00248C21 /* TestAutoScrollViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAutoScrollViewCell.swift; sourceTree = "<group>"; };
 		F2CB749B1D87EC1E00F0D94A /* SMRouteBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMRouteBus.framework; path = "../SMRouteBus/build/Debug-iphoneos/SMRouteBus.framework"; sourceTree = "<group>"; };
 		F2CB74A81D87EF4300F0D94A /* TestRefreshTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRefreshTableViewController.swift; sourceTree = "<group>"; };
 		F2E4D4E11D3E1A6100D4E916 /* SMUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMUIKit.framework; path = "../SMUIKit/build/Debug-iphoneos/SMUIKit.framework"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				F202A7551EA5F61F008EE2E8 /* Test2ViewController.swift */,
 				F202A7561EA5F61F008EE2E8 /* Test3ViewController.swift */,
 				F202A7571EA5F61F008EE2E8 /* Test4ViewController.swift */,
+				F2BEDF8C1EFA6EFA00248C21 /* TestAutoScrollViewCell.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F20CDC9A1D35E56900225D8F /* ViewController.swift in Sources */,
+				F2BEDF8D1EFA6EFA00248C21 /* TestAutoScrollViewCell.swift in Sources */,
 				F2CB74A91D87EF4300F0D94A /* TestRefreshTableViewController.swift in Sources */,
 				F202A7511EA5F5FE008EE2E8 /* TestRBPageCenter.swift in Sources */,
 				F2E4D5041D3F25EC00D4E916 /* SMBaseRequest.swift in Sources */,

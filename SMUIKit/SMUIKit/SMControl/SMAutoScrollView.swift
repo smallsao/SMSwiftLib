@@ -9,23 +9,25 @@
 import UIKit
 import Foundation
 
-open class SMAutoScrollView: SMView, UIPickerViewDelegate, UIPickerViewDataSource {
+
+
+open class SMAutoScrollView: SMView, UITableViewDelegate, UITableViewDataSource {
     
-    var pickerView:UIPickerView
+    var table:SMTableView
     
     open var delegate:SMAutoScrollDelegate?
     
     open var dataSource:SMAutoScrollDataSource?
     
     override public init() {
-        pickerView = UIPickerView()
+        table = SMTableView()
         
         super.init(frame:.zero)
         
-        pickerView.delegate = self
-        pickerView.dataSource = self
+        table.delegate = self
+        table.dataSource = self
         
-        self.addSubview(pickerView)
+        self.addSubview(table)
         
     }
     
@@ -36,96 +38,64 @@ open class SMAutoScrollView: SMView, UIPickerViewDelegate, UIPickerViewDataSourc
     override open func layoutSubviews() {
         super.layoutSubviews()
         
-        pickerView.frame = self.bounds
-        
-        
+        table.frame = self.bounds
     }
-    
     
     public func reloadData() {
-        pickerView.reloadAllComponents()
+        table.reloadData()
+    }
+    
+    public func dequeueReusableCell(withIdentifier identifier: String) -> SMAutoScrollViewCell? {
+        return table.dequeueReusableCell(withIdentifier: identifier) as? SMAutoScrollViewCell
     }
 
-    
-    //// DataSource
-    
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        if let sDataSource = dataSource {
-            return sDataSource.numberOfComponents(in: self)
-        }
-        else {
-            return 0
-        }
+    // UITableViewDataSource
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return 1;
     }
     
-    
-    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sDataSource = dataSource {
-            return sDataSource.autoScrollView(self, numberOfRowsInComponent: component)
-        }
-        else {
-            return 0
-        }
-    }
-    
-    
-    ///// Delegate
-    public func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-        if let sDelegate = delegate {
-            if sDelegate.responds(to: #selector(SMAutoScrollDelegate.autoScrollView(_:widthForComponent:))) {
-                return sDelegate.autoScrollView!(self, widthForComponent: component)
+            if sDataSource.responds(to: #selector(SMAutoScrollDataSource.numberOfRows(in:))) {
+                return sDataSource.numberOfRows(in: self)
             }
         }
+        
         return 0
     }
     
-    public func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        if let sDelegate = delegate {
-            if sDelegate.responds(to: #selector(SMAutoScrollDelegate.autoScrollView(_:rowHeightForComponent:))) {
-                return sDelegate.autoScrollView!(self, rowHeightForComponent: component)
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let sDataSource = dataSource {
+            if sDataSource.responds(to: #selector(SMAutoScrollDataSource.autoScrollView(_:cellForRowAt:))) {
+                return sDataSource.autoScrollView(self, cellForRowAt: indexPath.row)
             }
         }
-        return 0.0
-    }
-    
-
-    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if let sDelegate = delegate {
-            if sDelegate.responds(to: #selector(SMAutoScrollDelegate.autoScrollView(_:titleForRow:forComponent:))) {
-                return sDelegate.autoScrollView!(self, titleForRow: row, forComponent: component)
-            }
-        }
-        return ""
-    }
-    
-    public func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         
+        return UITableViewCell()
+    }
+    
+    
+    // UITableViewDelegate
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let sDelegate = delegate {
-            if sDelegate.responds(to: #selector(SMAutoScrollDelegate.autoScrollView(_:attributedTitleForRow:forComponent:))) {
-                return sDelegate.autoScrollView!(self, attributedTitleForRow: row, forComponent: component)
+            if sDelegate.responds(to: #selector(SMAutoScrollDelegate.autoScrollView(_:heightForRowAt:))) {
+                return sDelegate.autoScrollView(self, heightForRowAt: indexPath.row)
             }
         }
-        return NSAttributedString()
         
-    }
-    
-    public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        if let sDelegate = delegate {
-            if sDelegate.responds(to: #selector(SMAutoScrollDelegate.autoScrollView(_:viewForRow:forComponent:reusing:))) {
-                return sDelegate.autoScrollView!(self, viewForRow: row, forComponent: component, reusing: view)
-            }
-        }
-        return UIView()
+        return 0.0;
     }
     
     
-    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let sDelegate = delegate {
-            if sDelegate.responds(to: #selector(SMAutoScrollDelegate.autoScrollView(_:didSelectRow:inComponent:))) {
-                sDelegate.autoScrollView!(self, didSelectRow: row, inComponent: component)
+            if sDelegate.responds(to: #selector(SMAutoScrollDelegate.autoScrollView(_:didSelectRowAt:))) {
+                sDelegate.autoScrollView(self, didSelectRowAt: indexPath.row)
             }
         }
     }
+    
+    
     
     
     deinit {
@@ -135,24 +105,15 @@ open class SMAutoScrollView: SMView, UIPickerViewDelegate, UIPickerViewDataSourc
 }
 
 
-@objc public protocol SMAutoScrollDataSource : NSObjectProtocol {
-    func numberOfComponents(in autoScrollView: SMAutoScrollView) -> Int
+@objc public protocol SMAutoScrollDelegate:NSObjectProtocol {
+    @objc func autoScrollView(_ autoScrollView: SMAutoScrollView, heightForRowAt index: Int) -> CGFloat
     
-    func autoScrollView(_ autoScrollView: SMAutoScrollView, numberOfRowsInComponent component: Int) -> Int
+    @objc func autoScrollView(_ autoScrollView: SMAutoScrollView, didSelectRowAt index: Int)
 }
 
-@objc public protocol SMAutoScrollDelegate : NSObjectProtocol {
-    @objc optional func autoScrollView(_ autoScrollView: SMAutoScrollView, widthForComponent component: Int) -> CGFloat
+@objc public protocol SMAutoScrollDataSource:NSObjectProtocol {
+    @objc func numberOfRows(in autoScrollView: SMAutoScrollView) -> Int
     
-    @objc optional func autoScrollView(_ autoScrollView: SMAutoScrollView, rowHeightForComponent component: Int) -> CGFloat
-    
-    @objc optional func autoScrollView(_ autoScrollView: SMAutoScrollView, titleForRow row: Int, forComponent component: Int) -> String?
-    
-    @objc optional func autoScrollView(_ autoScrollView: SMAutoScrollView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString?
-    
-    @objc optional func autoScrollView(_ autoScrollView: SMAutoScrollView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView
-    
-    @objc optional func autoScrollView(_ autoScrollView: SMAutoScrollView, didSelectRow row: Int, inComponent component: Int)
-}
+    @objc func autoScrollView(_ autoScrollView: SMAutoScrollView, cellForRowAt index: Int) -> SMAutoScrollViewCell }
 
 
